@@ -28,10 +28,10 @@ const projectsKeys = [
     categories: ["web", "backend"],
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "TypeScript", "Material-UI", "Jest", "Playwright", "Chart.js", "Multer"],
     images: [
-      "/src/assets/Collectify1.png",
-      "/src/assets/Collectify2.png", 
-      "/src/assets/Collectify3.png",
-      "/src/assets/Collectify4.png"
+      "/Portfolio/assets/Collectify1.png",
+      "/Portfolio/assets/Collectify2.png", 
+      "/Portfolio/assets/Collectify3.png",
+      "/Portfolio/assets/Collectify4.png"
     ],
     image: "/api/placeholder/400/250",
     demoUrl: null,
@@ -45,8 +45,8 @@ const projectsKeys = [
     categories: ["web", "backend"],
     technologies: ["React", "Material-UI", "Recharts", "React Query", "Node.js", "Express", "MongoDB", "Axios"],
     images: [
-      "/src/assets/ProjectManagment.png",
-      "/src/assets/ProjectManagment2.png"
+      "/Portfolio/assets/ProjectManagment.png",
+      "/Portfolio/assets/ProjectManagment2.png"
     ],
     image: "/api/placeholder/400/250",
     demoUrl: null,
@@ -62,10 +62,10 @@ const projectsKeys = [
       "Kotlin", "Jetpack Compose", "Material 3", "MVVM", "Navigation Component", "SharedPreferences", "Custom Animations", "Manual DI", "Gradle", "Android Studio"
     ],
     images: [
-      "/src/assets/PyhtonIn20Days1.jpg",
-      "/src/assets/PyhtonIn20Days2.jpg",
-      "/src/assets/PyhtonIn20Days3.jpg",
-      "/src/assets/PyhtonIn20Days4.jpg"
+      "/Portfolio/assets/PyhtonIn20Days1.jpg",
+      "/Portfolio/assets/PyhtonIn20Days2.jpg",
+      "/Portfolio/assets/PyhtonIn20Days3.jpg",
+      "/Portfolio/assets/PyhtonIn20Days4.jpg"
     ],
     image: "/api/placeholder/400/250",
     demoUrl: "https://drive.google.com/file/d/1AoQr3gtaGzhfCeQ5O3BWnc5oRgzJyWsZ/view?usp=sharing",
@@ -79,11 +79,11 @@ const projectsKeys = [
     categories: ["game"],
     technologies: ["Unity", "C#", "Coroutines", "Object Pooling", "Singleton Pattern", "State Machine", "Git"],
     images: [
-      "/src/assets/AxoltlAccension1.png",
-      "/src/assets/AxoltlAccension2.png",
-      "/src/assets/AxoltlAccension3.png",
-      "/src/assets/AxoltlAccension4.png",
-      "/src/assets/AxoltlAccension5.png"
+      "/Portfolio/assets/AxoltlAccension1.png",
+      "/Portfolio/assets/AxoltlAccension2.png",
+      "/Portfolio/assets/AxoltlAccension3.png",
+      "/Portfolio/assets/AxoltlAccension4.png",
+      "/Portfolio/assets/AxoltlAccension5.png"
     ],
     image: "/api/placeholder/400/250",
     demoUrl: "https://fiuby.com/games/axolotl-ascension",
@@ -97,12 +97,12 @@ const projectsKeys = [
     categories: ["game"],
     technologies: ["Unity", "C#", "Level Design", "Game Design", "Storytelling", "Narrative Design"],
     images: [
-      "/src/assets/PaperTale.png",
-      "/src/assets/PaperTale1.png",
-      "/src/assets/PaperTale2.png",
-      "/src/assets/PaperTale3.png",
-      "/src/assets/PaperTale4.png",
-      "/src/assets/PaperTale5.png"
+      "/Portfolio/assets/PaperTale.png",
+      "/Portfolio/assets/PaperTale1.png",
+      "/Portfolio/assets/PaperTale2.png",
+      "/Portfolio/assets/PaperTale3.png",
+      "/Portfolio/assets/PaperTale4.png",
+      "/Portfolio/assets/PaperTale5.png"
     ],
     image: "/api/placeholder/400/250",
     demoUrl: "https://erque.itch.io/papertale",
@@ -115,10 +115,10 @@ const projectsKeys = [
     categories: ["game"],
     technologies: ["Unity", "C#", "Game Design", "UI/UX Design", "Marketing", "Solo Development", "Indie Game Development"],
     images: [
-      "/src/assets/vslike1.png",
-      "/src/assets/vslike2.png",
-      "/src/assets/vslike3.png",
-      "/src/assets/vslike4.png"
+      "/Portfolio/assets/vslike1.png",
+      "/Portfolio/assets/vslike2.png",
+      "/Portfolio/assets/vslike3.png",
+      "/Portfolio/assets/vslike4.png"
     ],
     image: "/api/placeholder/400/250",
     demoUrl: "https://www.youtube.com/@0toMillion-dev",
@@ -132,7 +132,7 @@ const projectsKeys = [
     categories: ["backend"],
     technologies: ["Node.js", "Express.js", "MongoDB", "Swagger", "Jest", "UUID", "dotenv"],
     images: [
-      "/src/assets/TOD-API.png"
+      "/Portfolio/assets/TOD-API.png"
     ],
     demoUrl: null,
     githubUrl: "https://github.com/KBatuhanB/Todo-API",
@@ -145,8 +145,8 @@ const projectsKeys = [
     categories: ["testing"],
     technologies: ["Playwright", "Jest", "Node.js", "MongoDB", "JavaScript"],
     images: [
-      "/src/assets/Playwright1.png",
-      "/src/assets/Playwright2.png"
+      "/Portfolio/assets/Playwright1.png",
+      "/Portfolio/assets/Playwright2.png"
     ],
     demoUrl: null,
     githubUrl: "https://github.com/KBatuhanB/Software-Tests",
@@ -158,7 +158,7 @@ const projectsKeys = [
     key: "pythonSeleniumAutomation",
     categories: ["testing"],
     technologies: ["Python", "Selenium", "Web Automation", "Data Structures"],
-    images: ["/src/assets/pyhtonExample1.png"],
+    images: ["/Portfolio/assets/pyhtonExample1.png"],
     demoUrl: null,
     githubUrl: "https://github.com/KBatuhanB/Phyton-Selenium-Tests-Examples",
     featured: false,

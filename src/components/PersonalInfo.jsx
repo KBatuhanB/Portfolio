@@ -16,7 +16,8 @@
 import React, { useState } from 'react';
 import { Mail, Github, Linkedin, Download, Check } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import profileImg from '../assets/MePhoto.jpg';
+// Profile image for production build
+const profileImg = '/Portfolio/assets/MePhoto.jpg';
 
 /**
  * PersonalInfo Component
