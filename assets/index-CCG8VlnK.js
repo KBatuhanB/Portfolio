@@ -3551,14 +3551,10 @@ Error generating stack: `+a.message+`
         .modal-image-gallery {
           position: relative;
           width: 100%;
-          height: 250px;
+          height: 300px;
           margin-bottom: 2rem;
-          border-radius: 8px;
+          border-radius: 12px;
           overflow: hidden;
-          background-image: var(--modal-bg-image);
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
         }
 
         .modal-image-gallery::before {
@@ -3568,13 +3564,14 @@ Error generating stack: `+a.message+`
           left: 0;
           right: 0;
           bottom: 0;
-          background-image: inherit;
-          background-size: contain;
+          background-image: var(--modal-bg-image);
+          background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
-          filter: none;
-          transform: scale(1);
+          filter: blur(15px);
+          opacity: 0.3;
           z-index: 1;
+          border-radius: 12px;
         }
 
         .modal-screenshot {
@@ -3582,12 +3579,10 @@ Error generating stack: `+a.message+`
           height: 100%;
           object-fit: contain;
           border-radius: 8px;
-          opacity: 0;
           position: relative;
           z-index: 2;
-          transform: translateX(0);
           transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          visibility: hidden;
+          visibility: visible;
         }
 
         .modal-screenshot.fade-in {
@@ -3648,7 +3643,7 @@ Error generating stack: `+a.message+`
           transform: translateX(-50%);
           display: flex;
           gap: 8px;
-          z-index: 10;
+          z-index: 5;
         }
 
         .modal-indicator {
@@ -3901,6 +3896,15 @@ Error generating stack: `+a.message+`
           .pagination {
             flex-direction: column;
             gap: 1rem;
+          }
+
+          .modal-image-gallery {
+            height: 200px;
+            margin-bottom: 1.5rem;
+          }
+
+          .modal-image-gallery::before {
+            transform: scale(0.95);
           }
 
           .pagination-btn {
