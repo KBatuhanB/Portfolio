@@ -1,0 +1,505 @@
+{
+  "navigation": {
+    "personal": "Personal Info",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education"
+  },
+  "personalInfo": {
+    "greeting": "Hi, I'm",
+    "name": "Kelami Batuhan",
+    "title": "Computer Science Student • Software Developer",
+    "description": "I develop software solutions that meet real-world needs, from full-stack web and backend systems to mobile applications built with Kotlin. Alongside these, I also explore game development, which strengthens my creativity and broadens my problem-solving perspective. My goal is to grow as a versatile engineer who can deliver reliable, scalable, and user-focused digital products.",
+    "getInTouch": "Get In Touch",
+    "downloadCV": "Download CV",
+    "emailOpened": "Email Opened!",
+    "downloaded": "Downloaded!",
+    "emailSubject": "Portfolio Inquiry",
+    "emailBody": "Hello Kelami Batuhan, I would like to discuss...",
+    "githubProfile": "GitHub profile",
+    "linkedinProfile": "LinkedIn profile",
+    "emailContact": "Email contact",
+    "scrollToExperience": "Scroll to experience section"
+  },
+  "experience": {
+    "title": "Experience",
+    "description": "My professional journey and key achievements",
+    "experienceTitle": "Professional Experience",
+    "skillsTitle": "Technical Skills",
+    "skillsDescription": "Technologies and tools I work with",
+    "allFilter": "All",
+    "internshipFilter": "Internships",
+    "gamejamFilter": "Game Jams",
+    "page": "Page",
+    "of": "of",
+    "previous": "Previous",
+    "next": "Next",
+    "skills": {
+      "programmingLanguages": "Programming Languages",
+      "webTechnologies": "Web Technologies",
+      "mobileGameDevelopment": "Mobile & Game Development",
+      "testingAutomation": "Testing & Automation",
+      "databases": "Databases"
+    },
+    "experiences": {
+      "secureComputing": {
+        "company": "Secure Computing",
+        "role": "Software Development Intern",
+        "duration": "Mar 2024 – Aug 2024",
+        "location": "Online",
+        "description": [
+          "Developed 'Collectify', a full-stack media collection management system as a portfolio project.",
+          "Designed and implemented a 3-tier architecture (React.js + Material-UI frontend, Node.js + Express.js backend, MongoDB database).",
+          "Built RESTful APIs, integrated database models, and implemented secure file upload with Multer.",
+          "Applied advanced React patterns: hooks, context, modular component architecture, and dynamic Material-UI theming.",
+          "Wrote unit, integration, and E2E tests using Jest and Playwright, achieving 80%+ code coverage.",
+          "Practiced clean code, SOLID principles, and modern Git workflow throughout the project.",
+          "Documented API endpoints and project setup for developer onboarding."
+        ]
+      },
+      "ankuGameJam": {
+        "company": "ANKU GameJam (Ankara University)",
+        "role": "Backend & Gameplay Developer",
+        "duration": "May 2025",
+        "location": "Ankara, Turkey",
+        "description": [
+          "Developed all core gameplay scripts in C# for the puzzle game 'Axolotl Ascension' using Unity.",
+          "Designed and implemented unique puzzle mechanics: players place objects on the map, assign timers, and solve challenges before their own or the objects' time runs out.",
+          "Handled player controls, time-based puzzle logic, and interactive UI elements.",
+          "Collaborated with a multidisciplinary team on game design, UI/UX, and rapid prototyping.",
+          "Demonstrated strong teamwork, problem-solving, and creativity under strict time constraints."
+        ]
+      },
+      "puraGameJam": {
+        "company": "PURA GameJam (Hacettepe University)",
+        "role": "Level Designer & Game Designer",
+        "duration": "March 2025",
+        "location": "Ankara, Turkey",
+        "description": [
+          "Co-developed the award-winning puzzle-adventure game 'Paper Tale', which placed 2nd in the competition.",
+          "Designed all game levels and crafted the core gameplay mechanics and story concept.",
+          "Created a unique narrative: the main character embarks on a magical journey inside a fairy tale book, collecting objects and powers from enchanted storybooks to progress.",
+          "Collaborated with a multidisciplinary team, contributing to both level design and overall game vision.",
+          "Demonstrated creativity, storytelling, and teamwork under tight deadlines."
+        ]
+      },
+      "ayazJam": {
+        "company": "AyazJam (Gazi University)",
+        "role": "Backend Developer",
+        "duration": "Dec 2024",
+        "location": "Ankara, Turkey",
+        "description": [
+          "Participated in my first game jam as a backend developer.",
+          "Collaborated with a team to implement basic game mechanics and backend logic."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A showcase of my work and passion projects",
+    "viewLive": "View Live",
+    "viewCode": "View Code",
+    "viewImages": "View Images",
+    "featuredProject": "Featured Project",
+    "allFilter": "All Projects",
+    "webFilter": "Web Development",
+    "backendFilter": "Backend Development",
+    "gameFilter": "Game Development",
+    "mobileFilter": "Mobile Apps",
+    "toolsFilter": "Testing & Automation",
+    "page": "Page",
+    "of": "of",
+    "previous": "Previous",
+    "next": "Next",
+    "showing": "Showing",
+    "projects": "projects",
+    "modal": {
+      "projectOverview": "Project Overview",
+      "keyFeatures": "Key Features",
+      "technicalStack": "Technical Stack",
+      "learningOutcomes": "Learning Outcomes"
+    },
+    "data": {
+      "collectify": {
+        "title": "Collectify",
+        "description": [
+          "Full-stack media collection management system",
+          "React.js frontend with Material-UI design",
+          "Node.js backend with MongoDB database",
+          "Comprehensive testing with Jest & Playwright"
+        ],
+        "detailedInfo": {
+          "overview": "Collectify is a comprehensive full-stack media collection management system built as a portfolio project to demonstrate modern web development practices and software engineering principles.",
+          "features": [
+            "3-tier architecture with React.js frontend, Node.js backend, and MongoDB database",
+            "Complete CRUD operations for books, movies, series, and games",
+            "Advanced React patterns: hooks, context, modular component architecture",
+            "Dynamic Material-UI theming with dark/light mode support",
+            "RESTful API design with proper HTTP methods and status codes",
+            "Secure file upload system using Multer middleware",
+            "Comprehensive testing suite with Jest and Playwright (80%+ coverage)",
+            "Interactive data visualization with Chart.js",
+            "Responsive design for all device types"
+          ],
+          "learningOutcomes": [
+            "Full-stack application architecture and design patterns",
+            "RESTful API development and database integration",
+            "Modern React.js with hooks and context management",
+            "Responsive UI/UX design with Material-UI",
+            "Comprehensive testing strategies",
+            "Clean code principles and SOLID design patterns"
+          ]
+        }
+      },
+      "projectManagement": {
+        "title": "Project Management Panel",
+        "description": [
+          "Modern project tracking and management system",
+          "Interactive dashboard with charts and analytics",
+          "Real-time updates using React Query",
+          "Complete CRUD operations with responsive design"
+        ],
+        "detailedInfo": {
+          "overview": "A modern web application designed for efficient project tracking and management with visual analytics and real-time data updates.",
+          "features": [
+            "Interactive dashboard with pie charts and status cards",
+            "Complete project lifecycle management (To Do, In Progress, Completed)",
+            "Real-time data updates using React Query for optimized performance",
+            "Responsive Material-UI design system implementation",
+            "Advanced sorting, filtering, and pagination functionality",
+            "CRUD operations with intuitive modal dialogs",
+            "Data visualization with Recharts for project analytics",
+            "Error handling and user notification system"
+          ],
+          "techDetails": {
+            "Frontend": ["React (Functional Components)", "Material-UI (MUI)", "Recharts", "@tanstack/react-query"],
+            "Backend": ["Node.js", "Express.js", "MongoDB", "CORS"],
+            "Features": ["Real-time Updates", "Data Caching", "Responsive Design", "Interactive Charts"]
+          },
+          "learningOutcomes": [
+            "Modern React patterns with hooks and functional components",
+            "State management with React Query for server state",
+            "Data visualization techniques with Recharts",
+            "Material-UI component library mastery",
+            "REST API integration and error handling"
+          ]
+        }
+      },
+      "pythonIn20Days": {
+        "title": "Python in 20 Days (Mobile App)",
+        "description": [
+          "Educational Android app for Python learning",
+          "20 interactive lessons with gamified experience",
+          "Bilingual support (Turkish/English)",
+          "Modern Jetpack Compose UI with mascot guidance"
+        ],
+        "detailedInfo": {
+          "overview": "Python in 20 Days is an educational Android app designed to teach Python programming fundamentals through an engaging, interactive, and gamified experience. The app features a mascot (KOBOT) guiding users through 20 structured lessons, with bilingual support and modern UI/UX.",
+          "features": [
+            "20 progressive lessons from Python basics to intermediate concepts",
+            "Interactive learning: multiple choice, fill-in-the-blank, code output prediction",
+            "Bilingual support: Turkish and English with dynamic switching",
+            "Gamified experience: progress tracking, achievements, level system",
+            "Animated UI: mascot animations, smooth transitions, visual feedback",
+            "Modern architecture: Clean Architecture, MVVM, single-activity pattern",
+            "Custom Compose components and advanced animations",
+            "Persistent progress and language settings with SharedPreferences"
+          ],
+          "techDetails": {
+            "Frontend & UI": ["Jetpack Compose", "Material 3", "Custom Animations", "Responsive Design"],
+            "Architecture": ["MVVM", "Single Activity", "Repository Pattern", "Manual DI"],
+            "Data & Storage": ["SharedPreferences", "Local Storage"],
+            "Development": ["Kotlin", "Gradle", "Android Studio"]
+          },
+          "learningOutcomes": [
+            "Advanced Android development with Jetpack Compose",
+            "Clean Architecture and modular design",
+            "SOLID principles and maintainable code",
+            "UI/UX design and accessibility",
+            "Gamification and interactive learning design",
+            "Internationalization and localization",
+            "Performance optimization and memory management"
+          ]
+        }
+      },
+      "paperTale": {
+        "title": "Paper Tale",
+        "description": [
+          "Award-winning puzzle-adventure game (2nd place)",
+          "Unity-based magical journey game",
+          "Unique storytelling mechanics",
+          "Team collaboration project"
+        ],
+        "detailedInfo": {
+          "overview": "Paper Tale is an award-winning puzzle-adventure game developed during PURA GameJam at Hacettepe University, achieving 2nd place in the competition. The game features a touching narrative about a father's magical journey through fairy tale worlds to save his daughter, with innovative gameplay mechanics centered around collecting magical objects and powers from enchanted storybooks.",
+          "features": [
+            "Compelling narrative: Father's quest to find cure for his daughter through magical fairy tale worlds",
+            "Innovative story-driven gameplay: Progression through collecting magical objects and powers from storybooks",
+            "Multi-layered level design: Each level represents different fairy tale environments with unique challenges",
+            "Immersive storytelling: Deep narrative integration with gameplay mechanics",
+            "Puzzle-adventure mechanics: Strategic thinking required to progress through magical worlds",
+            "Award-winning design: Recognized with 2nd place at PURA GameJam competition",
+            "Collaborative team development: Worked with multidisciplinary team under tight deadlines",
+            "Emotional storytelling: Touching father-daughter relationship at the core of the narrative"
+          ],
+          "techDetails": {
+            "Game Engine": ["Unity 2D", "C# Scripting", "Scene Management"],
+            "Design Role": ["Level Design", "Game Design", "Narrative Design", "Storytelling"],
+            "Game Mechanics": ["Puzzle-Adventure Elements", "Object Collection System", "Story Progression"],
+            "Team Collaboration": ["Multidisciplinary Team", "GameJam Environment", "Rapid Prototyping"]
+          },
+          "learningOutcomes": [
+            "Advanced level design principles and spatial storytelling",
+            "Game narrative integration with gameplay mechanics",
+            "Collaborative game development in time-constrained environment",
+            "Player experience design and emotional engagement techniques",
+            "Storytelling through interactive media and game design",
+            "Team leadership and creative vision communication",
+            "Rapid iteration and creative problem-solving under pressure"
+          ]
+        }
+      },
+      "axolotlAscension": {
+        "title": "Axolotl Ascension",
+        "description": [
+          "Innovative puzzle game with time mechanics",
+          "Unity engine with C# gameplay scripts",
+          "Creative timer-based challenges",
+          "GameJam competition entry"
+        ],
+        "detailedInfo": {
+          "overview": "Axolotl Ascension is a 2D puzzle-platform game developed during the Ankara University ANKU GameJam. The game features a unique time-sharing mechanic where players distribute their character's lifetime to placed objects while racing to rescue axolotls.",
+          "features": [
+            "Strategic object placement system with limited resources",
+            "Unique time-sharing mechanic: character distributes lifetime to objects",
+            "Dynamic timer system with visual countdown warnings",
+            "Pixel-perfect camera tracking and pre-game exploration",
+            "Advanced level management and transition system",
+            "Complete audio integration with placement and animation sounds",
+            "Pause system with menu navigation",
+            "Modular architecture using design patterns",
+            "Performance optimizations with object pooling and coroutines"
+          ],
+          "techDetails": {
+            "Game Engine": ["Unity 2022.3 LTS", "C# .NET Framework", "2D Universal Render Pipeline"],
+            "Architecture": ["Singleton Pattern", "Component Pattern", "Observer Pattern", "State Machine"],
+            "Core Systems": ["Timer System", "Level Manager", "Object Placement", "Camera Follow"],
+            "Optimization": ["Object Pooling", "Coroutines", "Event-Driven Architecture"]
+          },
+          "learningOutcomes": [
+            "Advanced Unity game development and C# programming",
+            "Game physics, collision detection, and 2D mechanics",
+            "Design patterns implementation in game development",
+            "Performance optimization and memory management",
+            "UI/UX programming and responsive game interfaces",
+            "Team collaboration and agile development in GameJam environment",
+            "Version control and code architecture in game projects"
+          ]
+        }
+      },
+      "todoApi": {
+        "title": "Todo-API",
+        "description": [
+          "RESTful API with Node.js and Express.js",
+          "Complete CRUD operations for todos",
+          "MongoDB integration with data validation",
+          "Swagger documentation and Jest testing"
+        ],
+        "detailedInfo": {
+          "overview": "A robust RESTful API built with Node.js and Express.js, demonstrating backend development best practices, API design patterns, and comprehensive testing methodologies.",
+          "features": [
+            "Complete CRUD operations for todo management",
+            "RESTful API design with proper HTTP methods and status codes",
+            "MongoDB integration with optimized data models",
+            "Swagger UI for interactive API documentation",
+            "Advanced data validation and error handling",
+            "UUID-based unique identifier generation",
+            "Environment variable management with dotenv",
+            "Comprehensive Jest testing suite",
+            "Modular project structure for maintainability"
+          ],
+          "techDetails": {
+            "Core": ["Node.js", "Express.js", "MongoDB"],
+            "Documentation": ["Swagger UI Express", "OpenAPI 3.0"],
+            "Testing": ["Jest", "Supertest", "Unit Tests", "Integration Tests"],
+            "Utilities": ["UUID", "dotenv", "CORS", "Morgan Logging"]
+          },
+          "learningOutcomes": [
+            "RESTful API architecture and design principles",
+            "MongoDB database design and optimization",
+            "API documentation with Swagger/OpenAPI",
+            "Test-driven development with Jest",
+            "Error handling and middleware patterns"
+          ]
+        }
+      },
+      "softwareTestingSuite": {
+        "title": "Software Testing Suite",
+        "description": [
+          "Comprehensive testing with Playwright & Jest",
+          "E2E testing for social media & e-commerce",
+          "Unit and integration test coverage",
+          "Cross-browser automation testing"
+        ],
+        "detailedInfo": {
+          "overview": "A comprehensive software testing suite demonstrating proficiency in various testing methodologies, from unit tests to end-to-end automation testing.",
+          "features": [
+            "End-to-end testing with Playwright for web applications",
+            "Social media workflow testing (X/Twitter authentication and messaging)",
+            "E-commerce functionality testing (Trendyol shopping cart operations)",
+            "Unit testing for basic operations and text analysis functions",
+            "Integration testing for database operations and MongoDB",
+            "Library management system testing",
+            "Shopping cart functionality validation",
+            "Cross-browser testing capabilities"
+          ],
+          "techDetails": {
+            "E2E Testing": ["Playwright", "Cross-browser Support", "Web Automation"],
+            "Unit Testing": ["Jest", "Function Testing", "Text Analysis"],
+            "Integration": ["MongoDB Testing", "Database Operations", "API Testing"],
+            "Applications": ["Social Media Testing", "E-commerce Testing", "Library Systems"]
+          },
+          "learningOutcomes": [
+            "End-to-end testing strategies and implementation",
+            "Test automation with Playwright",
+            "Unit and integration testing methodologies",
+            "Cross-browser compatibility testing",
+            "Database testing and validation techniques"
+          ]
+        }
+      },
+      "pythonSeleniumAutomation": {
+        "title": "Python & Selenium Automation",
+        "description": [
+          "Python programming exercises collection",
+          "Selenium web automation projects",
+          "Data structures and web scraping",
+          "Browser automation techniques"
+        ],
+        "detailedInfo": {
+          "overview": "A comprehensive collection of Python programming exercises and Selenium web automation projects, showcasing progression from Python fundamentals to advanced web automation techniques.",
+          "features": [
+            "Python programming fundamentals and best practices",
+            "Data structures implementation and manipulation",
+            "Web automation using Selenium WebDriver",
+            "Browser interaction and element locating strategies",
+            "Web scraping techniques and data extraction",
+            "Progressive learning from basics to advanced concepts",
+            "Practical automation scenarios and use cases",
+            "Clean code practices and documentation"
+          ],
+          "techDetails": {
+            "Programming": ["Python", "Object-Oriented Programming", "Data Structures"],
+            "Automation": ["Selenium WebDriver", "Browser Automation", "Element Location"],
+            "Techniques": ["Web Scraping", "Data Extraction", "Form Automation"],
+            "Learning": ["Progressive Exercises", "Practical Examples", "Best Practices"]
+          },
+          "learningOutcomes": [
+            "Python programming language mastery",
+            "Web automation and testing with Selenium",
+            "Data structures and algorithms in Python",
+            "Browser automation and web scraping techniques",
+            "Problem-solving and algorithmic thinking"
+          ]
+        }
+      },
+      "vslikeGame": {
+        "title": "VSlikeGame (Indie Game Development)",
+        "description": [
+          "🎮 Indie game inspired by Vampire Survivors",
+          "Enhanced weapon mechanics and progression",
+          "Solo development: code, design, marketing",
+          "Active YouTube development documentation"
+        ],
+        "detailedInfo": {
+          "overview": "VSlikeGame is an ambitious indie game project currently in development, inspired by Vampire Survivors but with enhanced weapon mechanics and progression systems. As a solo developer, I'm responsible for every aspect of the game including programming, design, UI/UX, marketing, and business development.",
+          "features": [
+            "Vampire Survivors-style gameplay with enhanced weapon mechanics",
+            "Progressive bullet enhancement system: new bullet properties each level",
+            "Weapon unlock system: new weapons every 5 levels",
+            "Complete solo development: programming, design, art, and marketing",
+            "Active YouTube marketing and development documentation",
+            "Custom gameplay mechanics and unique progression systems",
+            "Independent game development from concept to market",
+            "Ongoing development with regular updates and improvements"
+          ],
+          "techDetails": {
+            "Game Engine": ["Unity", "C# Programming", "Unity 2D/3D Systems"],
+            "Development Roles": ["Solo Developer", "Game Designer", "Programmer", "UI/UX Designer"],
+            "Marketing": ["YouTube Content Creation", "Social Media Marketing", "Community Building"],
+            "Project Management": ["Indie Development", "Self-Publishing", "Business Development"]
+          },
+          "learningOutcomes": [
+            "Complete indie game development lifecycle management",
+            "Solo development skills across multiple disciplines",
+            "Game design and mechanics balancing",
+            "Marketing and community building for indie games",
+            "Business aspects of independent game development",
+            "Project management and self-directed learning",
+            "Content creation and developer marketing strategies"
+          ]
+        }
+      }
+    },
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "planned": "Planned"
+    }
+  },
+  "education": {
+    "title": "Education",
+    "description": "My academic journey and continuous learning achievements",
+    "academicBackground": "Academic Background",
+    "achievements": "Achievements",
+    "current": "Current",
+    "completed": "Completed",
+    "educations": {
+      "gaziUniversity": {
+        "institution": "Gazi University",
+        "degree": "Computer Engineering",
+        "duration": "2024 - 2027 (Expected)",
+        "location": "Ankara, Turkey",
+        "gpa": "3.41/4.0",
+        "status": "current",
+        "description": "Currently pursuing Computer Engineering degree with focus on software development, algorithms, and system design. Transferred from Ankara Medipol University with lateral transfer. Active member of Gazi ACM club's R&D Game Development team, participating in GameJams and collaborative development projects.",
+        "achievements": [
+          "Member of Gazi ACM club's R&D Game Development team",
+          "Actively participating in GameJams and game development projects",
+          "Transferred via lateral transfer from Ankara Medipol University",
+          "Currently maintaining 3.41 GPA"
+        ]
+      },
+      "ankaraMedipolUniversity": {
+        "institution": "Ankara Medipol University",
+        "degree": "Computer Engineering (Full Scholarship)",
+        "duration": "2022 - 2024",
+        "location": "Ankara, Turkey",
+        "gpa": "3.69/4.0",
+        "status": "completed",
+        "description": "Completed preparatory class and first year of Computer Engineering with full scholarship. Founded and led the Medipol E-Sports club, serving as president and vice president for one year. Also served as a board member of Medipol Extreme Sports club, demonstrating leadership and organizational skills.",
+        "achievements": [
+          "Founded Medipol E-Sports club",
+          "Served as President and Vice President of E-Sports club for 1 year",
+          "Board member of Medipol Extreme Sports club",
+          "Achieved 3.69 GPA",
+          "Completed preparatory class and 1st year with full scholarship"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "getInTouch": "Get In Touch",
+    "description": "I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.",
+    "quickLinks": "Quick Links",
+    "connectWithMe": "Connect With Me",
+    "copyright": "All rights reserved.",
+    "madeWith": "Made with",
+    "using": "using React & Vite",
+    "sendEmail": "Send email",
+    "callPhone": "Call phone number",
+    "visitProfile": "Visit my",
+    "profile": "profile"
+  }
+}

@@ -1,0 +1,505 @@
+{
+  "navigation": {
+    "personal": "Kişisel Bilgiler",
+    "experience": "Deneyim",
+    "projects": "Projeler",
+    "education": "Eğitim"
+  },
+  "personalInfo": {
+    "greeting": "Ben",
+    "name": "Kelami Batuhan",
+    "title": "Bilgisayar Mühendisliği Öğrencisi • Yazılım Geliştirici",
+    "description": "Modern web teknolojileri ve yazılım mühendisliği prensiplerine odaklanarak, gerçek dünya problemlerine çözüm üreten yazılım geliştiriyorum. Full-stack web development'tan mobil uygulamalara, backend sistemlerden oyun geliştirmeye kadar geniş bir alanda deneyim kazanıyorum. Her proje benim için yeni bir öğrenme fırsatı ve yaratıcılığımı geliştirme şansı.",
+    "getInTouch": "İletişime Geç",
+    "downloadCV": "CV İndir",
+    "emailOpened": "E-posta Açıldı!",
+    "downloaded": "İndirildi!",
+    "emailSubject": "Portfolyo Sorusu",
+    "emailBody": "Merhaba Kelami Batuhan, görüşmek istediğim konular var...",
+    "githubProfile": "GitHub profili",
+    "linkedinProfile": "LinkedIn profili",
+    "emailContact": "E-posta iletişimi",
+    "scrollToExperience": "Deneyim bölümüne git"
+  },
+  "experience": {
+    "title": "Deneyim",
+    "description": "Profesyonel yolculuğum ve önemli başarılarım",
+    "experienceTitle": "Profesyonel Deneyim",
+    "skillsTitle": "Teknik Yetenekler",
+    "skillsDescription": "Çalıştığım teknolojiler ve araçlar",
+    "allFilter": "Hepsi",
+    "internshipFilter": "Stajlar",
+    "gamejamFilter": "Oyun Jam'leri",
+    "page": "Sayfa",
+    "of": "/",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "skills": {
+      "programmingLanguages": "Programlama Dilleri",
+      "webTechnologies": "Web Teknolojileri",
+      "mobileGameDevelopment": "Mobil ve Oyun Geliştirme",
+      "testingAutomation": "Test ve Otomasyon",
+      "databases": "Veritabanları"
+    },
+    "experiences": {
+      "secureComputing": {
+        "company": "Secure Computing",
+        "role": "Yazılım Geliştirme Stajyeri",
+        "duration": "Mar 2024 – Ağu 2024",
+        "location": "Çevrimiçi",
+        "description": [
+          "Staj kapsamında 'Collectify' adlı full-stack medya koleksiyon yönetim sistemi geliştirdim.",
+          "3 katmanlı mimari tasarladım: React.js + Material-UI frontend, Node.js + Express.js backend, MongoDB database.",
+          "RESTful API'ler tasarladım, database modellerini entegre ettim ve Multer ile güvenli dosya yükleme sistemi kurdum.",
+          "Modern React pattern'leri uyguladım: hooks, context API, modüler component architecture ve dynamic Material-UI theming.",
+          "Jest ve Playwright ile kapsamlı testler yazdım: unit, integration ve E2E testler (%80+ code coverage).",
+          "Clean code, SOLID prensipleri ve modern Git workflow'unu proje boyunca uyguladım.",
+          "Developer engagement için API endpoints ve project setup'ını detaylı bir şekilde dokümante ettim."
+        ]
+      },
+      "ankuGameJam": {
+        "company": "ANKU GameJam (Ankara Üniversitesi)",
+        "role": "Backend ve Oynanış Geliştiricisi",
+        "duration": "May 2025",
+        "location": "Ankara, Türkiye",
+        "description": [
+          "Unity kullanarak 'Axolotl Ascension' puzzle game için C# ile core gameplay scriptlerini geliştirdim.",
+          "Benzersiz puzzle mekanikleri tasarladım: oyuncular map'e nesneler yerleştiriyor, timer'lar set ediyor ve kendi zamanları veya nesnelerin zamanı dolmadan challenge'ları çözüyorlar.",
+          "Player kontrolleri, zaman bazlı puzzle logic'i ve interaktif UI elementlerini yönettim.",
+          "Game design, UI/UX ve rapid prototyping konularında multidisipliner ekiple işbirliği yaptım.",
+          "Sıkı deadline'lar altında güçlü teamwork, problem-solving ve yaratıcılık sergiledim."
+        ]
+      },
+      "puraGameJam": {
+        "company": "PURA GameJam (Hacettepe Üniversitesi)",
+        "role": "Seviye Tasarımcısı ve Oyun Tasarımcısı",
+        "duration": "Mar 2025",
+        "location": "Ankara, Türkiye",
+        "description": [
+          "Yarışmada 2. sıra kazanan 'Paper Tale' puzzle-adventure game'ini ekip ile birlikte geliştirdim.",
+          "Tüm game level'larını tasarladım ve core gameplay mekanikleri ile story concept'ini oluşturdum.",
+          "Benzersiz bir anlatı yarattım: ana karakter fairy tale kitabının içinde magical bir yolculuğa çıkıyor, magical story book'lardan item'lar ve güçler toplayarak ilerliyor.",
+          "Multidisipliner ekiple işbirliği yaparak hem level design'a hem de overall game vision'a katkıda bulundum.",
+          "Sıkı deadline'lar altında yaratıcılık, hikaye anlatımı ve teamwork sergiledim."
+        ]
+      },
+      "ayazJam": {
+        "company": "AyazJam (Gazi Üniversitesi)",
+        "role": "Backend Geliştirici",
+        "duration": "Ara 2024",
+        "location": "Ankara, Türkiye",
+        "description": [
+          "İlk GameJam deneyimimde backend developer olarak yer aldım.",
+          "Core game mekanikleri ve backend logic'i implement etmek için ekip ile işbirliği yaptım."
+        ]
+      }
+    }
+  },
+  "projects": {
+    "title": "Projeler",
+    "description": "Çalışmalarım ve tutkulu projelerimin vitrini",
+    "viewLive": "Canlı Görüntüle",
+    "viewCode": "Kodu Görüntüle",
+    "viewImages": "Görselleri Görüntüle",
+    "featuredProject": "Öne Çıkan Proje",
+    "allFilter": "Tüm Projeler",
+    "webFilter": "Web Geliştirme",
+    "backendFilter": "Backend Geliştirme",
+    "gameFilter": "Oyun Geliştirme",
+    "mobileFilter": "Mobil Uygulamalar",
+    "toolsFilter": "Test & Otomasyon",
+    "page": "Sayfa",
+    "of": "/",
+    "previous": "Önceki",
+    "next": "Sonraki",
+    "showing": "Gösteriliyor",
+    "projects": "proje",
+    "modal": {
+      "projectOverview": "Proje Genel Bakış",
+      "keyFeatures": "Temel Özellikler",
+      "technicalStack": "Teknik Yığın",
+      "learningOutcomes": "Öğrenme Çıktıları"
+    },
+    "data": {
+      "collectify": {
+        "title": "Collectify",
+        "description": [
+          "Full-stack medya koleksiyon yönetim sistemi",
+          "Material-UI tasarımlı React.js frontend",
+          "MongoDB veritabanı ile Node.js backend",
+          "Jest & Playwright ile kapsamlı test"
+        ],
+        "detailedInfo": {
+          "overview": "Modern web teknolojilerini ve yazılım mühendisliği prensiplerini uygulayarak geliştirdiğim kapsamlı bir medya koleksiyon yönetim platformu. Kitap, film, dizi ve oyun koleksiyonlarını düzenlemek isteyenler için tasarlandı.",
+          "features": [
+            "React.js, Node.js ve MongoDB ile modern 3 katmanlı mimari",
+            "Kitap, film, dizi ve oyunlar için ekleme, güncelleme, silme işlemleri",
+            "Modern React yaklaşımları: hooks, context API, modüler component yapısı",
+            "Karanlık/aydınlık tema desteği ile dinamik Material-UI tasarımı",
+            "Doğru HTTP metodları ve status kodları ile RESTful API",
+            "Güvenli dosya yükleme sistemi (Multer middleware)",
+            "Jest ve Playwright ile %80+ code coverage kapsamında test suite",
+            "Chart.js ile interaktif veri görselleştirme",
+            "Tüm cihazlarda mükemmel responsive tasarım"
+          ],
+          "learningOutcomes": [
+            "Full-stack uygulama mimarisi ve design pattern'lar",
+            "RESTful API geliştirme ve database entegrasyonu",
+            "Modern React.js ile hooks ve context yönetimi",
+            "Material-UI ile responsive UI/UX tasarımı",
+            "Kapsamlı test stratejileri ve best practice'ler",
+            "Clean code prensipleri ve SOLID design pattern'lar"
+          ]
+        }
+      },
+      "projectManagement": {
+        "title": "Proje Yönetim Paneli",
+        "description": [
+          "Modern proje takip ve yönetim sistemi",
+          "Grafikler ve analizler içeren etkileşimli dashboard",
+          "React Query kullanarak gerçek zamanlı güncellemeler",
+          "Duyarlı tasarım ile tam CRUD operasyonları"
+        ],
+        "detailedInfo": {
+          "overview": "Projelerinizi kolayca takip etmenizi ve yönetmenizi sağlayan modern bir web uygulaması. Gerçek zamanlı güncellemeler ve görsel analizlerle iş süreçlerinizi optimize edin.",
+          "features": [
+            "Pasta grafikler ve durum kartları ile interaktif dashboard",
+            "Proje yaşam döngüsü yönetimi (Planlanıyor, Devam Ediyor, Tamamlandı)",
+            "React Query ile optimize edilmiş performans ve gerçek zamanlı güncellemeler",
+            "Responsive Material-UI tasarım sistemi",
+            "Gelişmiş sıralama, filtreleme ve sayfalama özellikleri",
+            "Kullanıcı dostu modal pencereler ile kolay işlem yapma",
+            "Recharts ile detaylı proje analitiği ve veri görselleştirme",
+            "Kapsamlı hata yönetimi ve kullanıcı bildirimleri"
+          ],
+          "techDetails": {
+            "Frontend": ["React (Functional Components)", "Material-UI (MUI)", "Recharts", "@tanstack/react-query"],
+            "Backend": ["Node.js", "Express.js", "MongoDB", "CORS"],
+            "Özellikler": ["Gerçek Zamanlı Updates", "Data Caching", "Responsive Design", "Interactive Charts"]
+          },
+          "learningOutcomes": [
+            "Modern React pattern'leri ile hooks ve functional component'ler",
+            "React Query ile server state yönetimi",
+            "Recharts ile profesyonel veri görselleştirme",
+            "Material-UI component library kullanımı",
+            "REST API entegrasyonu ve error handling"
+          ]
+        }
+      },
+      "pythonIn20Days": {
+        "title": "20 Günde Python (Mobil Uygulama)",
+        "description": [
+          "Python öğrenmek için eğitsel Android uygulaması",
+          "Oyunlaştırılmış deneyim ile 20 etkileşimli ders",
+          "İki dilli destek (Türkçe/İngilizce)",
+          "Maskot rehberliği ile modern Jetpack Compose UI"
+        ],
+        "detailedInfo": {
+          "overview": "Python öğrenmek isteyenler için tasarladığım interaktif Android uygulaması. 20 gün boyunca KOBOT maskotumuzla Python temellerinden ileri seviye konulara kadar öğrenin.",
+          "features": [
+            "Python temellerinden orta seviyeye kadar 20 aşamalı ders programı",
+            "Çoktan seçmeli, boşluk doldurma ve kod çıktısı tahmin etme soruları",
+            "Türkçe ve İngilizce arasında anlık geçiş",
+            "İlerleme takibi, rozetler ve seviye sistemi ile gamification",
+            "KOBOT maskotu ile animasyonlar ve smooth geçişler",
+            "Clean Architecture, MVVM ve single-activity pattern ile modern mimari",
+            "Özel Jetpack Compose component'leri ve gelişmiş animasyonlar",
+            "SharedPreferences ile kalıcı progress ve dil ayarları"
+          ],
+          "techDetails": {
+            "Frontend & UI": ["Jetpack Compose", "Material 3", "Custom Animations", "Responsive Design"],
+            "Architecture": ["MVVM", "Single Activity", "Repository Pattern", "Manual DI"],
+            "Data & Storage": ["SharedPreferences", "Local Storage"],
+            "Development": ["Kotlin", "Gradle", "Android Studio"]
+          },
+          "learningOutcomes": [
+            "Jetpack Compose ile modern Android development",
+            "Clean Architecture ve modüler design",
+            "SOLID prensipleri ve maintainable code yazma",
+            "UI/UX design ve accessibility",
+            "Gamification ve interactive learning design",
+            "Internationalization ve localization",
+            "Performance optimization ve memory management"
+          ]
+        }
+      },
+      "paperTale": {
+        "title": "Paper Tale",
+        "description": [
+          "Ödüllü bulmaca-macera oyunu (2. sıra)",
+          "Unity tabanlı sihirli yolculuk oyunu",
+          "Benzersiz hikaye anlatım mekanikleri",
+          "Takım işbirliği projesi"
+        ],
+        "detailedInfo": {
+          "overview": "Hacettepe Üniversitesi PURA GameJam'de geliştirdiğim ve 2. sıra kazandığım ödüllü bulmaca-macera oyunu. Kızını kurtarmak için sihirli masal dünyalarında yolculuk yapan bir babanın dokunaklı hikayesi.",
+          "features": [
+            "Duygusal hikaye: Hasta kızı için sihirli masal dünyalarında tedavi arayan baba",
+            "Yenilikçi gameplay: Büyülü kitaplardan nesneler toplayarak ilerleme",
+            "Çok katmanlı level design: Her seviye farklı masal ortamı ve benzersiz zorluklar",
+            "Hikaye odaklı gameplay: Oyun mekanikleri ile hikaye entegrasyonu",
+            "Stratejik bulmaca-macera elementleri: Sihirli dünyalarda taktiksel düşünme",
+            "Ödüllü tasarım: PURA GameJam'de 2. sıra",
+            "Takım çalışması: Deadline altında multidisipliner ekiple geliştirme",
+            "Emotional storytelling: Baba-kız ilişkisi merkezde"
+          ],
+          "techDetails": {
+            "Game Engine": ["Unity 2D", "C# Scripting", "Scene Management"],
+            "Design Role": ["Level Design", "Game Design", "Narrative Design", "Storytelling"],
+            "Game Mechanics": ["Puzzle-Adventure Elements", "Item Collection System", "Story Progression"],
+            "Team Collaboration": ["Multidisciplinary Team", "GameJam Environment", "Rapid Prototyping"]
+          },
+          "learningOutcomes": [
+            "Advanced level design prensipleri ve spatial storytelling",
+            "Gameplay mechanics ile game narrative entegrasyonu",
+            "Zaman kısıtlı ortamda collaborative game development",
+            "Player experience design ve emotional connection teknikleri",
+            "Interactive media ve game design yoluyla storytelling",
+            "Team leadership ve creative vision communication",
+            "Baskı altında rapid iteration ve problem solving"
+          ]
+        }
+      },
+      "axolotlAscension": {
+        "title": "Axolotl Ascension",
+        "description": [
+          "Zaman mekaniği olan yenilikçi bulmaca oyunu",
+          "C# oynanış betikleri ile Unity engine",
+          "Yaratıcı zamanlayıcı tabanlı zorluklar",
+          "GameJam yarışma girdisi"
+        ],
+        "detailedInfo": {
+          "overview": "Ankara Üniversitesi ANKU GameJam'de geliştirdiğim 2D puzzle-platform oyunu. Karakterin yaşam süresini nesnelere paylaştırıp axolotl'ları kurtarmak için zamana karşı yarışılıyor.",
+          "features": [
+            "Sınırlı kaynaklarla stratejik nesne yerleştirme sistemi",
+            "Benzersiz time-sharing mechanic: karakterin yaşam süresini nesnelere dağıtma",
+            "Görsel countdown uyarıları ile dinamik timer sistemi",
+            "Pixel-perfect camera tracking ve pre-game exploration",
+            "Gelişmiş level management ve transition sistemi",
+            "Placement ve animation sound'ları ile tam ses entegrasyonu",
+            "Menu navigation ile pause sistemi",
+            "Design pattern'ları kullanarak modüler architecture",
+            "Object pooling ve coroutine'ler ile performance optimization"
+          ],
+          "techDetails": {
+            "Game Engine": ["Unity 2022.3 LTS", "C# .NET Framework", "2D Universal Render Pipeline"],
+            "Architecture": ["Singleton Pattern", "Component Pattern", "Observer Pattern", "State Machine"],
+            "Core Systems": ["Timer System", "Level Manager", "Object Placement", "Camera Follow"],
+            "Optimization": ["Object Pooling", "Coroutines", "Event-Driven Architecture"]
+          },
+          "learningOutcomes": [
+            "Advanced Unity game development ve C# programming",
+            "Game physics, collision detection ve 2D mechanics",
+            "Design pattern implementation in game development",
+            "Performance optimization ve memory management",
+            "UI/UX programming ve responsive game interfaces",
+            "GameJam ortamında team collaboration ve agile development",
+            "Version control ve code architecture"
+          ]
+        }
+      },
+      "todoApi": {
+        "title": "Todo-API",
+        "description": [
+          "Node.js ve Express.js ile RESTful API",
+          "Todo'lar için tam CRUD operasyonları",
+          "Veri doğrulama ile MongoDB entegrasyonu",
+          "Swagger dokümantasyonu ve Jest testleri"
+        ],
+        "detailedInfo": {
+          "overview": "Node.js ve Express.js ile geliştirilmiş sağlam bir RESTful API. Backend best practice'lerini, API design pattern'larını ve kapsamlı test metodolojilerini içeriyor.",
+          "features": [
+            "Todo yönetimi için tam CRUD operasyonları",
+            "Doğru HTTP metodları ve status kodları ile RESTful API design",
+            "MongoDB entegrasyonu ile optimize veri modelleri",
+            "Swagger UI ile interaktif API dokümantasyonu",
+            "Gelişmiş veri doğrulama ve hata yönetimi",
+            "UUID tabanlı benzersiz ID üretimi",
+            "dotenv ile environment variable yönetimi",
+            "Kapsamlı Jest test paketi",
+            "Modüler proje yapısı ile sürdürülebilirlik"
+          ],
+          "techDetails": {
+            "Core": ["Node.js", "Express.js", "MongoDB"],
+            "Documentation": ["Swagger UI Express", "OpenAPI 3.0"],
+            "Testing": ["Jest", "Supertest", "Unit Test", "Integration Test"],
+            "Utilities": ["UUID", "dotenv", "CORS", "Morgan Logging"]
+          },
+          "learningOutcomes": [
+            "RESTful API mimarisi ve tasarım prensipleri",
+            "MongoDB veri tabanı tasarımı ve optimizasyonu",
+            "Swagger/OpenAPI ile API dokümantasyonu",
+            "Jest ile test odaklı geliştirme (TDD)",
+            "Middleware ve hata yönetim pattern'leri"
+          ]
+        }
+      },
+      "softwareTestingSuite": {
+        "title": "Yazılım Test Paketi",
+        "description": [
+          "Playwright ve Jest ile kapsamlı test",
+          "Sosyal medya ve e-ticaret için E2E testleri",
+          "Unit ve entegrasyon test kapsamı",
+          "Çapraz tarayıcı otomasyon testleri"
+        ],
+        "detailedInfo": {
+          "overview": "Unit testlerden end-to-end automation testlere kadar çeşitli test metodolojilerinde uzmanlığımı gösteren kapsamlı bir yazılım test paketi.",
+          "features": [
+            "Web uygulamaları için Playwright ile E2E testler",
+            "Sosyal medya workflow testleri (X/Twitter authentication ve messaging)",
+            "E-commerce işlemleri testleri (Trendyol alışveriş sepeti operations)",
+            "Unit test ile temel fonksiyon ve metin analizi testleri",
+            "MongoDB entegrasyon testleri",
+            "Kütüphane yönetim sistemi testleri",
+            "Alışveriş sepeti işlevselliği doğrulama",
+            "Çapraz tarayıcı test desteği"
+          ],
+          "techDetails": {
+            "E2E Testing": ["Playwright", "Cross-Browser Support", "Web Automation"],
+            "Unit Testing": ["Jest", "Fonksiyon Testleri", "Metin Analizi"],
+            "Integration": ["MongoDB Testing", "Database Operations", "API Testing"],
+            "Applications": ["Sosyal Medya Testleri", "E-commerce Testleri", "Kütüphane Sistemleri"]
+          },
+          "learningOutcomes": [
+            "End-to-end test stratejileri ve uygulaması",
+            "Playwright ile test otomasyonu",
+            "Unit ve integration test metodolojileri",
+            "Çapraz tarayıcı uyumluluk testleri",
+            "Veritabanı testleri ve doğrulama teknikleri"
+          ]
+        }
+      },
+      "pythonSeleniumAutomation": {
+        "title": "Python ve Selenium Otomasyonu",
+        "description": [
+          "Python programlama alıştırmaları koleksiyonu",
+          "Selenium web otomasyon projeleri",
+          "Veri yapıları ve web kazıma",
+          "Tarayıcı otomasyon teknikleri"
+        ],
+        "detailedInfo": {
+          "overview": "Python temellerinden ileri seviye web otomasyon tekniklerine kadar ilerlemeyi gösteren Python programlama alıştırmaları ve Selenium web otomasyon projeleri koleksiyonu.",
+          "features": [
+            "Python programlama temelleri ve best practice'ler",
+            "Veri yapıları implementasyonu ve manipülasyonu",
+            "Selenium WebDriver ile web otomasyonu",
+            "Tarayıcı etkileşimi ve element bulma stratejileri",
+            "Web scraping teknikleri ve veri çıkarımı",
+            "Temellerden ileri seviyeye progressive learning",
+            "Pratik otomasyon senaryoları ve kullanım örnekleri",
+            "Clean code ve kapsamlı dokümantasyon"
+          ],
+          "techDetails": {
+            "Programming": ["Python", "Nesne Yönelimli Programlama", "Veri Yapıları"],
+            "Automation": ["Selenium WebDriver", "Tarayıcı Otomasyonu", "Element Konumlandırma"],
+            "Techniques": ["Web Scraping", "Veri Çıkarımı", "Form Otomasyonu"],
+            "Learning": ["Progressive Exercises", "Practical Examples", "Best Practices"]
+          },
+          "learningOutcomes": [
+            "Python programlama dili hakimiyeti",
+            "Selenium ile web otomasyonu ve test",
+            "Python'da veri yapıları ve algoritmalar",
+            "Tarayıcı otomasyonu ve web kazıma teknikleri",
+            "Problem çözme ve algoritmik düşünme"
+          ]
+        }
+      },
+      "vslikeGame": {
+        "title": "VSlikeGame (Indie Oyun Geliştirme)",
+        "description": [
+          "🎮 Vampire Survivors'dan ilham alan indie oyun",
+          "Geliştirilmiş silah mekanikleri ve ilerleme",
+          "Solo geliştirme: kod, tasarım, pazarlama",
+          "YouTube üzerinden geliştirme dokümantasyonu"
+        ],
+        "detailedInfo": {
+          "overview": "Vampire Survivors'dan ilham alarak geliştirdiğim indie oyun. Solo developer olarak programlama, tasarım, UI/UX, pazarlama ve iş geliştirme dahil oyunun her aşamasını yönettim.",
+          "features": [
+            "Gelişmiş silah mekanikleri ile gameplay",
+            "Seviye bazlı ilerleme ve bullet upgrade sistemi",
+            "Silah kilit açma sistemi: her 5 level'da yeni silahlar",
+            "Tam solo geliştirme: programlama, tasarım, art ve pazarlama",
+            "YouTube üzerinden aktif marketing ve development documentation",
+            "Özel gameplay mekanikleri ve progression sistemleri",
+            "Fikri konseptten market'e bağımsız oyun geliştirme",
+            "Sürekli güncellemeler ve iyileştirmeler ile ongoing development"
+          ],
+          "techDetails": {
+            "Game Engine": ["Unity", "C# Programming", "Unity 2D/3D Systems"],
+            "Development Roles": ["Solo Developer", "Game Designer", "Programmer", "UI/UX Designer"],
+            "Marketing": ["YouTube Content Creation", "Social Media Marketing", "Community Building"],
+            "Project Management": ["Indie Development", "Self-Publishing", "Business Development"]
+          },
+          "learningOutcomes": [
+            "Bağımsız oyun geliştirme süreci yönetimi",
+            "Çok disiplinli solo geliştirme becerileri",
+            "Oyun tasarımı ve mekanik dengeleme",
+            "Indie oyunlar için marketing ve topluluk yönetimi",
+            "Bağımsız oyun geliştirmede iş yönetimi",
+            "Proje yönetimi ve self-directed learning",
+            "İçerik üretimi ve geliştirici pazarlama stratejileri"
+          ]
+        }
+      }
+    },
+    "status": {
+      "completed": "Tamamlandı",
+      "inProgress": "Devam Ediyor",
+      "planned": "Planlandı"
+    }
+  },
+  "education": {
+    "title": "Eğitim",
+    "description": "Akademik yolculuğum ve sürekli öğrenme başarılarım",
+    "academicBackground": "Akademik Geçmiş",
+    "achievements": "Başarılar",
+    "current": "Mevcut",
+    "completed": "Tamamlandı",
+    "educations": {
+      "gaziUniversity": {
+        "institution": "Gazi Üniversitesi",
+        "degree": "Bilgisayar Mühendisliği",
+        "duration": "2024 - 2027 (Beklenen)",
+        "location": "Ankara, Türkiye",
+        "gpa": "3.41/4.0",
+        "status": "current",
+        "description": "Software development, algoritmalar ve sistem tasarımı odaklı Computer Engineering lisans programında eğitim görüyorum. Ankara Medipol University'den yatay geçiş yaptım. Gazi ACM club'ının R&D Game Development takımının aktif üyesiyim, GameJam'lere ve collaborative development projelerine katılıyorum.",
+        "achievements": [
+          "Gazi ACM club'ının R&D Game Development takım üyesi",
+          "GameJam'lere ve oyun geliştirme projelerine aktif katılım",
+          "Ankara Medipol University'den başarılı yatay geçiş",
+          "Şu anda 3.41 GPA"
+        ]
+      },
+      "ankaraMedipolUniversity": {
+        "institution": "Ankara Medipol Üniversitesi",
+        "degree": "Bilgisayar Mühendisliği (Tam Burs)",
+        "duration": "2022 - 2024",
+        "location": "Ankara, Türkiye",
+        "gpa": "3.69/4.0",
+        "status": "completed",
+        "description": "Full scholarship ile hazırlık sınıfı ve Computer Engineering 1. sınıfı tamamladım. Medipol E-Sports kulübünü kurdum ve yönettim, bir yıl boyunca başkan ve başkan yardımcısı olarak görev yaptım. Ayrıca Medipol Extreme Sports kulübünde yönetim kurulu üyesi olarak liderlik ve organizasyon becerilerimi gösterdim.",
+        "achievements": [
+          "Medipol E-Sports kulübünü kurdu",
+          "E-Sports kulübünde 1 yıl Başkan ve Başkan Yardımcısı olarak görev yaptı",
+          "Medipol Extreme Sports kulübü yönetim kurulu üyesi",
+          "3.69 GPA elde etti",
+          "Tam burslu olarak hazırlık ve 1. sınıf tamamlandı"
+        ]
+      }
+    }
+  },
+  "footer": {
+    "getInTouch": "İletişime Geçin",
+    "description": "Her zaman yeni fırsatları, heyecan verici projeleri tartışmaya veya teknoloji hakkında sohbet etmeye açığım.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "connectWithMe": "Benimle Bağlantı Kurun",
+    "copyright": "Tüm hakları saklıdır.",
+    "madeWith": "ile yapıldı",
+    "using": "React & Vite kullanılarak",
+    "sendEmail": "E-posta gönder",
+    "callPhone": "Telefon numarasını ara",
+    "visitProfile": "Profilimi ziyaret et",
+    "profile": "Profil"
+  }
+}
