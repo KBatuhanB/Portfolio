@@ -130,25 +130,32 @@
           "Jest & Playwright ile kapsamlı test"
         ],
         "detailedInfo": {
-          "overview": "Modern web teknolojilerini ve yazılım mühendisliği prensiplerini uygulayarak geliştirdiğim kapsamlı bir medya koleksiyon yönetim platformu. Kitap, film, dizi ve oyun koleksiyonlarını düzenlemek isteyenler için tasarlandı.",
+          "overview": "Collectify, modern web geliştirme pratikleri, veritabanı tasarımı, API mimarisi ve kullanıcı deneyimi prensipleriyle geliştirilmiş kapsamlı bir full-stack medya koleksiyon yönetim sistemidir. Bilgisayar mühendisliği eğitimi kapsamında geliştirilen bu proje, React.js, Node.js, MongoDB ve modern geliştirme metodolojilerinde uzmanlığı sergilemektedir.",
           "features": [
-            "React.js, Node.js ve MongoDB ile modern 3 katmanlı mimari",
-            "Kitap, film, dizi ve oyunlar için ekleme, güncelleme, silme işlemleri",
-            "Modern React yaklaşımları: hooks, context API, modüler component yapısı",
-            "Karanlık/aydınlık tema desteği ile dinamik Material-UI tasarımı",
-            "Doğru HTTP metodları ve status kodları ile RESTful API",
-            "Güvenli dosya yükleme sistemi (Multer middleware)",
-            "Jest ve Playwright ile %80+ code coverage kapsamında test suite",
-            "Chart.js ile interaktif veri görselleştirme",
-            "Tüm cihazlarda mükemmel responsive tasarım"
+            "Modern 3 katmanlı mimari: React.js + Material-UI frontend, Node.js + Express.js backend, MongoDB veritabanı ile net sorumluluk ayrımı",
+            "Kapsamlı medya yönetimi: Kitap, film, dizi ve oyunlar için gelişmiş filtreleme ve arama yetenekleriyle tam CRUD operasyonları",
+            "Gelişmiş React ekosistemi: Hooks, state yönetimi için Context API, component composition pattern'ları ve lazy loading ile performans optimizasyonları",
+            "Dinamik tema sistemi: Sorunsuz karanlık/aydınlık mod geçişi ve responsive breakpoint yönetimiyle özel Material-UI implementasyonu",
+            "RESTful API mükemmelliği: Uygun HTTP metodları, status kodları, error handling middleware ve input validation ile standartlaştırılmış endpoint yapısı",
+            "Güvenli dosya yönetimi: Dosya işleme, CORS implementasyonu ve input sanitization ile Multer tabanlı görsel yükleme sistemi",
+            "Kapsamlı test stratejisi: Jest unit testing, integration testing, %80+ kod kapsamı ve cross-browser uyumluluğu ile Playwright E2E otomasyonu",
+            "İnteraktif veri görselleştirme: Gerçek zamanlı güncellemeler, istatistiksel analiz ve responsive dashboard layout'ları ile Chart.js entegrasyonu",
+            "Performans optimizasyonu: Code splitting, memoization teknikleri, veritabanı indexleme ve verimli bellek yönetimi",
+            "Profesyonel geliştirme pratikleri: Semantic commit'lerle Git workflow'u, kapsamlı dokümantasyon ve endüstri standardı kod kalitesi"
           ],
+          "techDetails": {
+            "Frontend": ["React.js 19.1.0", "Material-UI 7.2.0", "Chart.js 4.5.0", "Axios 1.10.0", "Modern Hooks"],
+            "Backend": ["Node.js 18+", "Express.js 4.18.2", "MongoDB 6.17.0", "Multer 2.0.1", "CORS 2.8.5"],
+            "Testing": ["Jest", "Playwright", "Unit Tests", "Integration Tests", "E2E Tests", "%80+ Coverage"],
+            "DevTools": ["Babel", "ESLint", "Nodemon", "Git Workflow", "Performance Monitoring"]
+          },
           "learningOutcomes": [
-            "Full-stack uygulama mimarisi ve design pattern'lar",
-            "RESTful API geliştirme ve database entegrasyonu",
-            "Modern React.js ile hooks ve context yönetimi",
-            "Material-UI ile responsive UI/UX tasarımı",
-            "Kapsamlı test stratejileri ve best practice'ler",
-            "Clean code prensipleri ve SOLID design pattern'lar"
+            "Full-stack uygulama mimarisi: 3 katmanlı mimari, design pattern'lar (Repository, MVC, Context Provider) ve ölçeklenebilir sistem tasarımının tam anlayışı",
+            "Modern React uzmanlığı: Gelişmiş component pattern'ları, hooks ekosistemi, Context API state yönetimi, performans optimizasyonu ve responsive UI/UX prensipleri",
+            "Backend mühendisliği mükemmelliği: RESTful API tasarımı, veritabanı şema optimizasyonu, middleware pattern'ları, güvenlik implementasyonu ve error handling stratejileri",
+            "Kalite güvencesi uzmanlığı: Çok seviyeli test yaklaşımları (unit, integration, E2E), otomatik test pipeline'ları, kod kapsama analizi ve cross-browser uyumluluğu",
+            "Endüstri standardı pratikler: Clean code prensipleri, SOLID tasarım pattern'ları, Git workflow yönetimi, teknik dokümantasyon ve profesyonel geliştirme metodolojileri",
+            "Problem çözme yetenekleri: Karmaşık teknik zorluk çözümü, performans ayarlama, debugging stratejileri ve kullanıcı deneyimi optimizasyonu"
           ]
         }
       },

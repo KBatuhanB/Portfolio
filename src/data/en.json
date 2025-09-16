@@ -130,25 +130,32 @@
           "Comprehensive testing with Jest & Playwright"
         ],
         "detailedInfo": {
-          "overview": "Collectify is a comprehensive full-stack media collection management system built as a portfolio project to demonstrate modern web development practices and software engineering principles.",
+          "overview": "Collectify is a comprehensive full-stack media collection management system demonstrating advanced full-stack development skills through modern web development patterns, database design, API architecture, and user experience principles. Built as part of computer engineering studies, it showcases proficiency in React.js, Node.js, MongoDB, and modern development methodologies.",
           "features": [
-            "3-tier architecture with React.js frontend, Node.js backend, and MongoDB database",
-            "Complete CRUD operations for books, movies, series, and games",
-            "Advanced React patterns: hooks, context, modular component architecture",
-            "Dynamic Material-UI theming with dark/light mode support",
-            "RESTful API design with proper HTTP methods and status codes",
-            "Secure file upload system using Multer middleware",
-            "Comprehensive testing suite with Jest and Playwright (80%+ coverage)",
-            "Interactive data visualization with Chart.js",
-            "Responsive design for all device types"
+            "Modern 3-tier architecture: React.js + Material-UI frontend, Node.js + Express.js backend, MongoDB database with clear separation of concerns",
+            "Complete media management: Full CRUD operations for books, movies, series, and games with advanced filtering and search capabilities",
+            "Advanced React ecosystem: Hooks, Context API for state management, component composition patterns, and performance optimizations with lazy loading",
+            "Dynamic theming system: Custom Material-UI implementation with seamless dark/light mode switching and responsive breakpoint management",
+            "RESTful API excellence: Standardized endpoint structure with proper HTTP methods, status codes, error handling middleware, and input validation",
+            "Secure file management: Multer-based image upload system with file processing, CORS implementation, and input sanitization",
+            "Comprehensive testing strategy: Jest unit testing, integration testing, Playwright E2E automation with 80%+ code coverage and cross-browser compatibility",
+            "Interactive data visualization: Chart.js integration with real-time updates, statistical analysis, and responsive dashboard layouts",
+            "Performance optimization: Code splitting, memoization techniques, database indexing, and efficient memory management",
+            "Professional development practices: Git workflow with semantic commits, comprehensive documentation, and industry-standard code quality"
           ],
+          "techDetails": {
+            "Frontend": ["React.js 19.1.0", "Material-UI 7.2.0", "Chart.js 4.5.0", "Axios 1.10.0", "Modern Hooks"],
+            "Backend": ["Node.js 18+", "Express.js 4.18.2", "MongoDB 6.17.0", "Multer 2.0.1", "CORS 2.8.5"],
+            "Testing": ["Jest", "Playwright", "Unit Tests", "Integration Tests", "E2E Tests", "80%+ Coverage"],
+            "DevTools": ["Babel", "ESLint", "Nodemon", "Git Workflow", "Performance Monitoring"]
+          },
           "learningOutcomes": [
-            "Full-stack application architecture and design patterns",
-            "RESTful API development and database integration",
-            "Modern React.js with hooks and context management",
-            "Responsive UI/UX design with Material-UI",
-            "Comprehensive testing strategies",
-            "Clean code principles and SOLID design patterns"
+            "Full-stack application architecture: Complete understanding of 3-tier architecture, design patterns (Repository, MVC, Context Provider), and scalable system design",
+            "Modern React mastery: Advanced component patterns, hooks ecosystem, Context API state management, performance optimization, and responsive UI/UX principles",
+            "Backend engineering excellence: RESTful API design, database schema optimization, middleware patterns, security implementation, and error handling strategies",
+            "Quality assurance expertise: Multi-level testing approaches (unit, integration, E2E), automated testing pipelines, code coverage analysis, and cross-browser compatibility",
+            "Industry-standard practices: Clean code principles, SOLID design patterns, Git workflow management, technical documentation, and professional development methodologies",
+            "Problem-solving capabilities: Complex technical challenge resolution, performance tuning, debugging strategies, and user experience optimization"
           ]
         }
       },
