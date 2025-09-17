@@ -57,17 +57,11 @@ const PersonalInfo = () => {
   const handleResumeDownload = () => {
     setCvDownloaded(true);
     
-    // Option 1: Direct download (CV dosyasını public klasörüne koy)
+    // GitHub Pages için doğru path
     const link = document.createElement('a');
-    link.href = '/cv.pdf'; // public/cv.pdf dosyasını koymalısın
+    link.href = '/Portfolio/cv.pdf'; // GitHub Pages deployment için
     link.download = 'Kelami_Batuhan_CV.pdf';
     link.click();
-    
-    // Option 2: Yeni tab'da aç
-    // window.open('/cv.pdf', '_blank');
-    
-    // Option 3: Google Drive link kullan
-    // window.open('https://drive.google.com/file/d/YOUR_FILE_ID/view', '_blank');
     
     // Reset state after 3 seconds
     setTimeout(() => {
