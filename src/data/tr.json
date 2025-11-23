@@ -411,6 +411,44 @@
           ]
         }
       },
+      "handMouse": {
+        "title": "Hand Mouse Controller",
+        "description": [
+          "Doğal el hareketi tabanlı kontrol sistemi",
+          "MediaPipe + OpenCV ile Bilgisayarlı Görü",
+          "Fare, medya, ses ve konuşma tanıma kontrolü",
+          "Gerçek zamanlı işleme ile modern CustomTkinter GUI"
+        ],
+        "detailedInfo": {
+          "overview": "Hand Mouse Controller, herhangi bir web kamerasını sezgisel bir etkileşim katmanına dönüştürüyor: el hareketleri fare hareketlerini, sistem sesini, medya oynatmasını kontrol ediyor ve sürekli konuşmadan metne dönüştürme sağlıyor. Bu portfolyo projesi pratik Bilgisayarlı Görü entegrasyonunu, insan merkezli hareket tasarımını ve temiz modüler Python mimarisini gösteriyor.",
+          "features": [
+            "Sağ el hassas fare kontrolü: adaptif yumuşatmalı avuç içi takibi, tıklamalar için sıkıştırma varyasyonları, kaydırma modu ve sürükle-bırak fonksiyonu",
+            "Sol el ses ve medya kontrolü: sürekli ses seviyesi ayarlama, sessize alma, oynat/duraklat hareketleri ve alt sistem etkinleştirme/devre dışı bırakma",
+            "Global duraklat sistemi: her iki el birlikte tüm işlemleri kamerayı kapatmadan güvenli şekilde dondurur",
+            "Gerçek zamanlı konuşma dönüştürme: yapılandırılabilir dillerde (Türkçe/İngilizce) sürekli mikrofon dinleme ve hızlı pano tabanlı metin enjeksiyonu",
+            "Canlı HUD overlay: FPS, el varlığı göstergeleri, aktif hareket isimleri ve konuşma durumu görüntülenir",
+            "Kalıcı ayar yönetimi: çalışma zamanı yeniden yükleme ve EXE yapıları için AppData depolama ile JSON tabanlı yapılandırma",
+            "Modern CustomTkinter GUI: kontrol sekmeleriyle duyarlı kamera görünümü, kaydırılabilir ayarlar ve özel hareket yardım modeli",
+            "Yüksek özgünlüklü hareket tanıma: üç parmak sıkıştırma, yönlü hareketler ve çarpışma önleme ile yumruk algılama",
+            "Performans optimizasyonları: kamera tamponu azaltma, EMA yumuşatma sınırları ve ayrılmış overlay rendering",
+            "Bağımsız EXE oluşturucu: Python kurulumu gerektirmeyen paketlenmiş kütüphanelerle taşınabilir binary"
+          ],
+          "techDetails": {
+            "Core": ["Python 3.10", "MediaPipe Hands", "OpenCV", "Computer Vision"],
+            "Sistem Entegrasyonu": ["PyAutoGUI", "Win32 APIs", "Pycaw/COM", "Clipboard Injection"],
+            "Konuşma ve Ses": ["SpeechRecognition", "PyAudio", "Google Speech Engine"],
+            "GUI": ["CustomTkinter", "Responsive Design", "Real-time HUD Overlay"]
+          },
+          "learningOutcomes": [
+            "Bilgisayarlı Görü entegrasyonu: Gerçek zamanlı işaret noktası algılama, hareket tanıma algoritmaları ve koordinat eşleme sistemleri",
+            "Multimodal etkileşim tasarımı: Sezgisel UX için hareket keşfedilebilirliği, ergonomi ve minimum yanlış pozitif dengeleme",
+            "Sistem seviyesi programlama: Win32 API entegrasyonu, ses kontrolü soyutlama ve pano manipülasyon teknikleri",
+            "Modüler Python mimarisi: Genişletilebilirlik ve gelecek geliştirmeler için temiz endişe ayrımı",
+            "Performans optimizasyonu: Gecikme azaltma stratejileri, tampon yönetimi ve adaptif yumuşatma algoritmaları",
+            "Üretim dağıtımı: EXE paketleme, AppData yapılandırma yönetimi ve çapraz platform değerlendirmeleri"
+          ]
+        }
+      },
       "vslikeGame": {
         "title": "VSlikeGame (Indie Oyun Geliştirme)",
         "description": [

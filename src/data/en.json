@@ -411,6 +411,44 @@
           ]
         }
       },
+      "handMouse": {
+        "title": "Hand Mouse Controller",
+        "description": [
+          "Natural hand-gesture driven control system",
+          "Computer Vision with MediaPipe + OpenCV",
+          "Mouse, media, volume and speech dictation control",
+          "Modern CustomTkinter GUI with real-time processing"
+        ],
+        "detailedInfo": {
+          "overview": "Hand Mouse Controller transforms any webcam into an intuitive interaction layer where hand gestures control mouse movements, system volume, media playback, and enable continuous speech-to-text dictation. This portfolio project demonstrates practical Computer Vision integration, human-centered gesture design, and clean modular Python architecture.",
+          "features": [
+            "Right hand precision mouse control: palm tracking with adaptive smoothing, pinch variations for clicks, scroll mode, and drag-and-drop functionality",
+            "Left hand audio & media control: continuous volume ramping, mute toggle, play/pause gestures, and subsystem enable/disable",
+            "Global pause system: both hands together freeze all actions safely without camera shutdown",
+            "Real-time speech dictation: continuous microphone listening with configurable languages (Turkish/English) and fast clipboard-based text injection",
+            "Live overlay HUD: displays FPS, hand presence indicators, active gesture names, and speech status",
+            "Persistent settings management: JSON-based configuration with runtime reload and AppData storage for EXE builds",
+            "Modern CustomTkinter GUI: responsive camera view with control tabs, scrollable settings, and dedicated gesture help modal",
+            "High-specificity gesture recognition: three-finger pinches, directional movements, and fist detection with collision avoidance",
+            "Performance optimizations: camera buffer reduction, EMA smoothing bounds, and decoupled overlay rendering",
+            "Standalone EXE builder: portable binary with bundled libraries requiring no Python installation"
+          ],
+          "techDetails": {
+            "Core": ["Python 3.10", "MediaPipe Hands", "OpenCV", "Computer Vision"],
+            "System Integration": ["PyAutoGUI", "Win32 APIs", "Pycaw/COM", "Clipboard Injection"],
+            "Speech & Audio": ["SpeechRecognition", "PyAudio", "Google Speech Engine"],
+            "GUI": ["CustomTkinter", "Responsive Design", "Real-time HUD Overlay"]
+          },
+          "learningOutcomes": [
+            "Computer Vision integration: Real-time landmark detection, gesture recognition algorithms, and coordinate mapping systems",
+            "Multimodal interaction design: Balancing gesture discoverability, ergonomics, and minimal false positives for intuitive UX",
+            "System-level programming: Win32 API integration, audio control abstraction, and clipboard manipulation techniques",
+            "Modular Python architecture: Clean separation of concerns enabling extensibility and future augmentation",
+            "Performance optimization: Latency reduction strategies, buffer management, and adaptive smoothing algorithms",
+            "Production deployment: EXE packaging, AppData configuration management, and cross-platform considerations"
+          ]
+        }
+      },
       "vslikeGame": {
         "title": "VSlikeGame (Indie Game Development)",
         "description": [

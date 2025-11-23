@@ -23,6 +23,18 @@ import { useLanguage } from '../contexts/LanguageContext';
  */
 const projectsKeys = [
   {
+    id: 11,
+    key: "handMouse",
+    categories: ["testing", "backend"],
+    technologies: ["Python", "MediaPipe", "OpenCV", "Computer Vision", "PyAutoGUI", "CustomTkinter", "Speech Recognition"],
+    youtubeUrl: "https://www.youtube.com/watch?v=sYUPL4Bo9bo",
+    images: [],
+    demoUrl: "https://www.youtube.com/watch?v=sYUPL4Bo9bo",
+    githubUrl: "https://github.com/KBatuhanB/HandMouse",
+    featured: true,
+    status: "completed"
+  },
+  {
     id: 1,
     key: "collectify",
     categories: ["web", "backend"],
@@ -164,6 +176,7 @@ const projectsKeys = [
     featured: false,
     status: "completed"
   }
+  
 ];
 
 /**
@@ -445,9 +458,21 @@ const Projects = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openProjectModal(project)}
             >
-              {/* Project Image */}
+              {/* Project Image or YouTube */}
               <div className="project-image">
-                {project.images && project.images.length > 0 ? (
+                {project.youtubeUrl ? (
+                  <div className="youtube-preview">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src={`https://www.youtube.com/embed/${project.youtubeUrl.split('v=')[1]}?modestbranding=1&rel=0`}
+                      title={project.title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                ) : project.images && project.images.length > 0 ? (
                   <div 
                     className="image-gallery"
                     style={{
@@ -644,8 +669,20 @@ const Projects = () => {
 
             {/* Modal Body */}
             <div className="modal-body">
-              {/* Project Image Gallery */}
-              {selectedProject.images && selectedProject.images.length > 0 ? (
+              {/* Project Image Gallery or YouTube Video */}
+              {selectedProject.youtubeUrl ? (
+                <div className="modal-youtube-container">
+                  <iframe
+                    width="100%"
+                    height="450"
+                    src={`https://www.youtube.com/embed/${selectedProject.youtubeUrl.split('v=')[1]}`}
+                    title={selectedProject.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              ) : selectedProject.images && selectedProject.images.length > 0 ? (
                 <div 
                   className="modal-image-gallery"
                   style={{
@@ -1597,6 +1634,23 @@ const Projects = () => {
           }
         }
 
+        .youtube-preview {
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          overflow: hidden;
+          position: relative;
+        }
+
+        .youtube-preview iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+        }
+
         .image-gallery::before {
           content: '';
           position: absolute;
@@ -2356,6 +2410,25 @@ const Projects = () => {
           overflow: hidden;
           border: 2px solid rgba(29, 78, 216, 0.1);
           box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-youtube-container {
+          position: relative;
+          width: 100%;
+          height: 450px;
+          margin-bottom: 2rem;
+          border-radius: 12px;
+          overflow: hidden;
+          background: #000;
+        }
+
+        .modal-youtube-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
         }
 
         .modal-image-gallery {
