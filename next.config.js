@@ -6,14 +6,21 @@ const nextConfig = {
   // SWC minification - daha hızlı build
   swcMinify: true,
   
-  // Performans optimizasyonu
-  poweredByHeader: false,
+  // GitHub Pages deployment - static export
+  output: 'export',
   
-  // Image optimization ayarları
+  // Base path for GitHub Pages subdirectory
+  basePath: '/Portfolio',
+  
+  // Disable Image Optimization for static export
   images: {
+    unoptimized: true,
     domains: [],
     formats: ['image/avif', 'image/webp'],
   },
+  
+  // Performans optimizasyonu
+  poweredByHeader: false,
   
   // i18n desteği için hazırlık (gelecekte gerekirse)
   // i18n: {
