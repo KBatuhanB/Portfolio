@@ -104,23 +104,23 @@ export function AppBar() {
             : 'bg-background border-transparent'
         )}
       >
-        <nav className="container-custom">
-          <div className="flex items-center justify-between h-16">
+        <nav className="container-custom px-2 sm:px-4">
+          <div className="flex items-center justify-between h-14 sm:h-16 gap-2">
             {/* Logo / Brand */}
             <Link
               href="/"
-              className="flex items-center space-x-2 group"
+              className="flex items-center space-x-1.5 sm:space-x-2 group flex-shrink-0"
             >
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-primary-foreground font-bold text-xl">KB</span>
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-primary-foreground font-bold text-base sm:text-xl">KB</span>
               </div>
-              <span className="font-semibold text-lg hidden sm:inline-block">
+              <span className="font-semibold text-sm sm:text-lg hidden sm:inline-block">
                 Portfolio
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-1 flex-1 justify-center">
               {routes.map((route) => (
                 <Link
                   key={route.href}
@@ -140,7 +140,7 @@ export function AppBar() {
             </div>
 
             {/* Right side - Language Switcher & Mobile Menu Button */}
-            <div className="flex items-center space-x-2 md:space-x-4">
+            <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-shrink-0">
               {/* Desktop Language Switcher */}
               <div className="hidden md:block">
                 <LanguageSwitcher />
@@ -154,7 +154,7 @@ export function AppBar() {
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={cn(
-                  'md:hidden p-2.5 rounded-lg',
+                  'md:hidden p-2 sm:p-2.5 rounded-lg',
                   'hover:bg-accent transition-colors duration-200',
                   'focus:outline-none focus:ring-2 focus:ring-ring'
                 )}
@@ -164,7 +164,7 @@ export function AppBar() {
                 {isMobileMenuOpen ? (
                   // Close icon
                   <svg
-                    className="w-7 h-7"
+                    className="w-5 h-5 sm:w-7 sm:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -180,7 +180,7 @@ export function AppBar() {
                 ) : (
                   // Hamburger icon
                   <svg
-                    className="w-7 h-7"
+                    className="w-5 h-5 sm:w-7 sm:h-7"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -213,13 +213,13 @@ export function AppBar() {
       {isMobileMenuOpen && (
         <div
           className={cn(
-            'fixed top-16 left-0 right-0 bottom-0 z-40',
+            'fixed top-14 sm:top-16 left-0 right-0 bottom-0 z-40',
             'bg-background border-t border-border',
             'md:hidden overflow-y-auto',
             'animate-slide-in-from-top'
           )}
         >
-          <nav className="container-custom py-4">
+          <nav className="container-custom py-4 px-3">
             <div className="flex flex-col space-y-2">
               {routes.map((route) => (
                 <Link
