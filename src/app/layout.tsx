@@ -31,25 +31,39 @@ const inter = Inter({
  */
 export const metadata: Metadata = {
   title: {
-    default: 'Kelami Batuhan - Portfolio',
-    template: '%s | Kelami Batuhan', // Sayfa başlığı template'i
+    default: 'Batuhan Bölükbaşı',
+    template: '%s | Batuhan Bölükbaşı', // Sayfa başlığı template'i
   },
   description: 'Kişisel portfolyo websitem - Projelerim, yeteneklerim ve deneyimlerim',
   keywords: ['portfolio', 'web developer', 'software engineer', 'projects'],
-  authors: [{ name: 'Kelami Batuhan' }],
-  creator: 'Kelami Batuhan',
+  authors: [{ name: 'Batuhan Bölükbaşı' }],
+  creator: 'Batuhan Bölükbaşı',
+  icons: {
+    icon: '/Portfolio/logo.png',
+    shortcut: '/Portfolio/logo.png',
+    apple: '/Portfolio/logo.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://yourwebsite.com', // TODO: Gerçek domain ile değiştir
-    siteName: 'Kelami Batuhan Portfolio',
-    title: 'Kelami Batuhan - Portfolio',
+    url: 'https://kbatuhanb.github.io/Portfolio/',
+    siteName: 'Batuhan Bölükbaşı Portfolio',
+    title: 'Batuhan Bölükbaşı - Portfolio',
     description: 'Kişisel portfolyo websitem',
+    images: [
+      {
+        url: '/Portfolio/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'Batuhan Bölükbaşı Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kelami Batuhan - Portfolio',
+    title: 'Batuhan Bölükbaşı - Portfolio',
     description: 'Kişisel portfolyo websitem',
+    images: ['/Portfolio/logo.png'],
   },
   robots: {
     index: true,

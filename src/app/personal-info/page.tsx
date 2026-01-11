@@ -220,7 +220,7 @@ export default function PersonalInfoPage() {
                             
                             {/* CV İndirme Butonu */}
                             <a
-                              href="/cv.pdf"
+                              href="/Portfolio/cv.pdf"
                               download="CV_Batuhan_Bolukbasi.pdf"
                               target="_blank"
                               rel="noopener noreferrer"
@@ -264,7 +264,7 @@ export default function PersonalInfoPage() {
                           {/* Main Image Container */}
                           <div className="relative overflow-hidden rounded-2xl border-2 border-pink-500/40 shadow-2xl shadow-pink-500/20 backdrop-blur-sm">
                             <img
-                              src="/images/profile.jpg"
+                              src="/Portfolio/images/profile.jpg"
                               alt="Kelami Batuhan"
                               className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                               style={{ maxWidth: '280px', maxHeight: '350px' }}
