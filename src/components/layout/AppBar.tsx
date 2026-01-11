@@ -105,28 +105,28 @@ export function AppBar() {
         )}
       >
         <nav className="container-custom">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             {/* Logo / Brand */}
             <Link
               href="/"
               className="flex items-center space-x-2 group"
             >
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                <span className="text-primary-foreground font-bold text-xl">KB</span>
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                <span className="text-primary-foreground font-bold text-2xl">KB</span>
               </div>
-              <span className="font-semibold text-lg hidden sm:inline-block">
+              <span className="font-semibold text-xl hidden sm:inline-block">
                 Portfolio
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
+            <div className="hidden md:flex items-center space-x-2">
               {routes.map((route) => (
                 <Link
                   key={route.href}
                   href={route.href}
                   className={cn(
-                    'px-4 py-2 rounded-lg text-sm font-medium',
+                    'px-5 py-2.5 rounded-lg text-base font-medium',
                     'transition-all duration-200',
                     'hover:bg-accent hover:text-accent-foreground',
                     isActive(route.href)
@@ -213,7 +213,7 @@ export function AppBar() {
       {isMobileMenuOpen && (
         <div
           className={cn(
-            'fixed top-16 left-0 right-0 bottom-0 z-40',
+            'fixed top-20 left-0 right-0 bottom-0 z-40',
             'bg-background border-t border-border',
             'md:hidden overflow-y-auto',
             'animate-slide-in-from-top'
