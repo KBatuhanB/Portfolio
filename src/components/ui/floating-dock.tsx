@@ -165,7 +165,8 @@ function IconContainer({
 
 /**
  * Mobile versiyonu - Collapsible menu
- * Alt kısımda ortalanmış, ekran genişliğine göre otomatik boyutlandırılır
+ * Alt kısımda, ekran genişliğine göre otomatik boyutlandırılır
+ * Ekranı optimum şekilde kullanır - daha büyük butonlar ve boşluklar
  */
 const FloatingDockMobile = ({
   items,
@@ -177,9 +178,11 @@ const FloatingDockMobile = ({
   const [open, setOpen] = useState(true); // Default açık
   
   // Toplam item sayısı + toggle buton = items.length + 1
-  // Her item için minimum alan: w-10 (40px) + gap
-  // Ekrana sığması için dinamik gap ve boyut hesaplanır
   const totalItems = items.length + 1; // +1 for toggle button
+  
+  // Ekran genişliğine göre dinamik boyut ve gap hesaplama
+  // Buton boyutu: min 44px, max 52px - touch target olarak uygun
+  // Gap: kalan alanı eşit dağıt
   
   return (
     <div className={cn('relative block md:hidden', className)}>
@@ -187,11 +190,11 @@ const FloatingDockMobile = ({
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute left-full bottom-0 flex flex-row items-center"
+            className="absolute left-full bottom-0 flex flex-row items-center ml-1"
             style={{
-              // Ekran genişliğine göre gap hesapla
-              // max-width: calc(100vw - toggle button - padding)
-              gap: `clamp(4px, calc((100vw - ${totalItems * 40}px - 48px) / ${totalItems}), 12px)`,
+              // Ekran genişliğine göre gap hesapla - daha geniş gap aralığı
+              // Mobil padding: 12px (left) + toggle button + gap'ler
+              gap: `clamp(6px, calc((100vw - ${totalItems * 44}px - 32px) / ${totalItems - 1}), 16px)`,
             }}
           >
             {items.map((item, idx) => (
@@ -214,7 +217,12 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center border border-white/[0.2] shadow-lg flex-shrink-0"
+                  className="h-11 w-11 rounded-full bg-neutral-900 flex items-center justify-center border border-white/[0.2] shadow-lg flex-shrink-0"
+                  style={{
+                    // Dinamik buton boyutu - ekrana göre ölçeklendir
+                    width: `clamp(42px, calc((100vw - 32px) / ${totalItems} - 8px), 52px)`,
+                    height: `clamp(42px, calc((100vw - 32px) / ${totalItems} - 8px), 52px)`,
+                  }}
                   onClick={() => setOpen(false)}
                 >
                   <div className="h-5 w-5">{item.icon}</div>
@@ -226,8 +234,18 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center border border-white/[0.2] shadow-lg flex-shrink-0"
+        className="h-11 w-11 rounded-full bg-neutral-900 flex items-center justify-center border border-white/[0.2] shadow-lg flex-shrink-0"
+        style={{
+          // Toggle buton da aynı dinamik boyutta
+          width: `clamp(42px, calc((100vw - 32px) / ${totalItems} - 8px), 52px)`,
+          height: `clamp(42px, calc((100vw - 32px) / ${totalItems} - 8px), 52px)`,
+        }}
       >
+        <IconLayoutNavbarCollapse className={cn("h-5 w-5 text-white transition-transform duration-200", open && "rotate-90")} />
+      </button>
+    </div>
+  );
+};
         <IconLayoutNavbarCollapse className={cn("h-5 w-5 text-white transition-transform duration-200", open && "rotate-90")} />
       </button>
     </div>
