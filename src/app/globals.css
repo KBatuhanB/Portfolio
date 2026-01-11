@@ -1,0 +1,113 @@
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Variables - Design System */
+@layer base {
+  :root {
+    /* Siyah-Beyaz Renk Paleti */
+    /* Arkaplan siyah, yazılar beyaz */
+    --background: 0 0% 100%;           /* Pure black background */
+    --foreground: 0 0% 3.9%;         /* Pure white text */
+    --card: 0 0% 100%;                 /* Slightly lighter black for cards */
+    --card-foreground: 0 0% 3.9%;    /* White text on cards */
+    --popover: 0 0% 100%;              /* Popover background */
+    --popover-foreground: 0 0% 3.9%; /* Popover text */
+    --primary: 0 0% 9%;            /* White primary */
+    --primary-foreground: 0 0% 98%;   /* Black text on primary */
+    --secondary: 0 0% 96.1%;           /* Dark gray secondary */
+    --secondary-foreground: 0 0% 9%; /* White text on secondary */
+    --muted: 0 0% 96.1%;               /* Muted gray */
+    --muted-foreground: 0 0% 45.1%;    /* Light gray text */
+    --accent: 0 0% 96.1%;              /* Accent gray */
+    --accent-foreground: 0 0% 9%;  /* White text on accent */
+    --destructive: 0 84.2% 60.2%;         /* Light gray for destructive */
+    --destructive-foreground: 0 0% 98%; /* Black text on destructive */
+    --border: 0 0% 89.8%;              /* Dark gray borders */
+    --input: 0 0% 89.8%;               /* Input borders */
+    --ring: 0 0% 3.9%;               /* White focus ring */
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  /* Dark mode - aynı kalıyor çünkü zaten siyah tema kullanıyoruz */
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    /* Smooth font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Scrollbar styling - modern görünüm */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-foreground;
+  }
+}
+
+/* Utility classes - özel durumlar için */
+@layer utilities {
+  /* Text gradients */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r;
+  }
+  
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  /* Container with max-width */
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
