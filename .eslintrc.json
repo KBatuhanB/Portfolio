@@ -4,13 +4,9 @@
     "next/typescript"
   ],
   "rules": {
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-require-imports": "off",
-    "react-hooks/rules-of-hooks": "off",
-    "react-hooks/exhaustive-deps": "off",
-    "@next/next/no-img-element": "off",
+    // Kod kalitesi kuralları
     "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "prefer-const": "warn",
+    "prefer-const": "error",
     "no-var": "error"
   }
 }
