@@ -378,6 +378,20 @@ export default function SkillsPage() {
    */
   const isTurkish = t.navigation.skills === 'Yetenekler';
 
+  /**
+   * Soft skills kategorisini ayır (ilk kategori)
+   */
+  const softSkillsCategory = useMemo(() => {
+    return categories.find(cat => cat.id === 'soft-skills');
+  }, [categories]);
+
+  /**
+   * Teknik skill kategorilerini al (soft skills hariç)
+   */
+  const technicalCategories = useMemo(() => {
+    return categories.filter(cat => cat.id !== 'soft-skills');
+  }, [categories]);
+
   return (
     <>
       <BackgroundBeamsWithCollision colorTheme="yellow">
@@ -429,9 +443,75 @@ export default function SkillsPage() {
               <ExperienceLegend labels={experienceLabels} />
             </div>
 
-            {/* Skills Grid */}
+            {/* Kişisel Yetenekler - Tablo Formatı */}
+            {softSkillsCategory && (
+              <div className="max-w-7xl mx-auto mb-12">
+                <div className="bg-black/80 border border-yellow-500/30 rounded-xl p-6 hover:border-yellow-400/60 transition-all duration-300">
+                  {/* Kategori Başlığı */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="text-4xl">{softSkillsCategory.icon}</span>
+                    <div>
+                      <h2 className="text-2xl font-bold text-yellow-300">
+                        {softSkillsCategory.name}
+                      </h2>
+                      <p className="text-sm text-yellow-200/60">
+                        {softSkillsCategory.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Tablo Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3">
+                    {softSkillsCategory.skills.map((skill, index) => {
+                      const colors = getExperienceColor(skill.yearsOfExperience);
+                      const experienceText = formatExperience(skill.yearsOfExperience, experienceLabels);
+                      
+                      return (
+                        <div
+                          key={`soft-${skill.name}-${index}`}
+                          className={`
+                            relative flex flex-col items-center justify-center
+                            px-4 py-3 rounded-lg
+                            ${colors.bg} ${colors.border} border
+                            transition-all duration-300
+                            hover:scale-105 hover:shadow-lg
+                            cursor-default
+                            min-h-[80px]
+                          `}
+                        >
+                          {/* Aktif kullanım badge'i */}
+                          {skill.isActive && (
+                            <div 
+                              className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-black"
+                              title={experienceLabels.activelyUsing}
+                            >
+                              <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75" />
+                            </div>
+                          )}
+                          
+                          {/* Deneyim göstergesi dot */}
+                          <div className={`w-2 h-2 rounded-full ${colors.dot} mb-2`} />
+                          
+                          {/* Skill adı */}
+                          <span className="text-sm font-medium text-yellow-100 text-center leading-tight">
+                            {skill.name}
+                          </span>
+                          
+                          {/* Deneyim süresi */}
+                          <span className={`text-xs font-semibold ${colors.text} mt-1`}>
+                            {experienceText}
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Teknik Yetenekler - Card Grid */}
             <div className="max-w-7xl mx-auto">
-              {categories.length === 0 ? (
+              {technicalCategories.length === 0 ? (
                 <div className="text-center py-16">
                   <div className="text-6xl mb-4">🔍</div>
                   <p className="text-yellow-300/70 text-lg">
@@ -442,7 +522,7 @@ export default function SkillsPage() {
                 </div>
               ) : (
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-                  {categories.map((category) => (
+                  {technicalCategories.map((category) => (
                     <div key={category.id} className="break-inside-avoid">
                       <SkillCategoryCard
                         category={category}

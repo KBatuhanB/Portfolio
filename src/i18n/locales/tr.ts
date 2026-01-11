@@ -760,6 +760,24 @@ Yolculuğum GameJam'lere aktif katılım, stajlar ve gerçek dünya projelerini 
     },
     categories: [
       {
+        id: 'soft-skills',
+        name: 'Kişisel Yetenekler',
+        icon: '🧠',
+        description: 'Liderlik, iletişim ve problem çözme becerileri',
+        skills: [
+          { name: 'Risk Yönetimi', yearsOfExperience: 3, isActive: true },
+          { name: 'Yaratıcılık & İnovasyon', yearsOfExperience: 4, isActive: true },
+          { name: 'Problem Çözme', yearsOfExperience: 4, isActive: true },
+          { name: 'Takım Çalışması', yearsOfExperience: 3, isActive: true },
+          { name: 'Proje Yönetimi', yearsOfExperience: 2, isActive: true },
+          { name: 'İletişim & Sunum', yearsOfExperience: 3, isActive: true },
+          { name: 'Zaman Yönetimi', yearsOfExperience: 4, isActive: true },
+          { name: 'Adaptasyon & Esneklik', yearsOfExperience: 3, isActive: true },
+          { name: 'Liderlik', yearsOfExperience: 2, isActive: true },
+          { name: 'Analitik Düşünme', yearsOfExperience: 3, isActive: true },
+        ],
+      },
+      {
         id: 'frontend',
         name: 'Frontend Geliştirme',
         icon: '🎨',
@@ -771,7 +789,7 @@ Yolculuğum GameJam'lere aktif katılım, stajlar ve gerçek dünya projelerini 
           { name: 'JavaScript ES6+', yearsOfExperience: 3, isActive: true },
           { name: 'Tailwind CSS', yearsOfExperience: 2, isActive: true },
           { name: 'Material-UI', yearsOfExperience: 1 },
-          { name: 'HTML5 & CSS3', yearsOfExperience: 4, isActive: true },
+          { name: 'HTML5 & CSS3', yearsOfExperience: 2, isActive: true },
         ],
       },
       {
@@ -784,7 +802,7 @@ Yolculuğum GameJam'lere aktif katılım, stajlar ve gerçek dünya projelerini 
           { name: 'Express.js', yearsOfExperience: 2, isActive: true },
           { name: 'ASP.NET Core', yearsOfExperience: 1 },
           { name: 'REST API Design', yearsOfExperience: 2, isActive: true },
-          { name: 'Python', yearsOfExperience: 2, isActive: true },
+          { name: 'Python', yearsOfExperience: 4, isActive: true },
           { name: 'Flask', yearsOfExperience: 1 },
           { name: 'C#', yearsOfExperience: 2, isActive: true },
         ],
@@ -871,8 +889,8 @@ Yolculuğum GameJam'lere aktif katılım, stajlar ve gerçek dünya projelerini 
         icon: '🛠️',
         description: 'Geliştirme araçları ve versiyon kontrol',
         skills: [
-          { name: 'Git & GitHub', yearsOfExperience: 4, isActive: true },
-          { name: 'VS Code', yearsOfExperience: 4, isActive: true },
+          { name: 'Git & GitHub', yearsOfExperience: 3, isActive: true },
+          { name: 'VS Code', yearsOfExperience: 3, isActive: true },
           { name: 'Swagger/OpenAPI', yearsOfExperience: 2 },
           { name: 'npm/yarn', yearsOfExperience: 3, isActive: true },
           { name: 'Postman', yearsOfExperience: 2, isActive: true },

@@ -759,6 +759,24 @@ My journey includes active participation in Game Jams, internships, and real-wor
     },
     categories: [
       {
+        id: 'soft-skills',
+        name: 'Personal Skills',
+        icon: '🧠',
+        description: 'Leadership, communication and problem-solving abilities',
+        skills: [
+          { name: 'Risk Management', yearsOfExperience: 3, isActive: true },
+          { name: 'Creativity & Innovation', yearsOfExperience: 4, isActive: true },
+          { name: 'Problem Solving', yearsOfExperience: 4, isActive: true },
+          { name: 'Teamwork', yearsOfExperience: 3, isActive: true },
+          { name: 'Project Management', yearsOfExperience: 2, isActive: true },
+          { name: 'Communication & Presentation', yearsOfExperience: 3, isActive: true },
+          { name: 'Time Management', yearsOfExperience: 4, isActive: true },
+          { name: 'Adaptation & Flexibility', yearsOfExperience: 3, isActive: true },
+          { name: 'Leadership', yearsOfExperience: 2, isActive: true },
+          { name: 'Analytical Thinking', yearsOfExperience: 3, isActive: true },
+        ],
+      },
+      {
         id: 'frontend',
         name: 'Frontend Development',
         icon: '🎨',
@@ -770,7 +788,7 @@ My journey includes active participation in Game Jams, internships, and real-wor
           { name: 'JavaScript ES6+', yearsOfExperience: 3, isActive: true },
           { name: 'Tailwind CSS', yearsOfExperience: 2, isActive: true },
           { name: 'Material-UI', yearsOfExperience: 1 },
-          { name: 'HTML5 & CSS3', yearsOfExperience: 4, isActive: true },
+          { name: 'HTML5 & CSS3', yearsOfExperience: 2, isActive: true },
         ],
       },
       {
@@ -783,7 +801,7 @@ My journey includes active participation in Game Jams, internships, and real-wor
           { name: 'Express.js', yearsOfExperience: 2, isActive: true },
           { name: 'ASP.NET Core', yearsOfExperience: 1 },
           { name: 'REST API Design', yearsOfExperience: 2, isActive: true },
-          { name: 'Python', yearsOfExperience: 2, isActive: true },
+          { name: 'Python', yearsOfExperience: 4, isActive: true },
           { name: 'Flask', yearsOfExperience: 1 },
           { name: 'C#', yearsOfExperience: 2, isActive: true },
         ],
@@ -870,8 +888,8 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '🛠️',
         description: 'Development tools and version control',
         skills: [
-          { name: 'Git & GitHub', yearsOfExperience: 4, isActive: true },
-          { name: 'VS Code', yearsOfExperience: 4, isActive: true },
+          { name: 'Git & GitHub', yearsOfExperience: 3, isActive: true },
+          { name: 'VS Code', yearsOfExperience: 3, isActive: true },
           { name: 'Swagger/OpenAPI', yearsOfExperience: 2 },
           { name: 'npm/yarn', yearsOfExperience: 3, isActive: true },
           { name: 'Postman', yearsOfExperience: 2, isActive: true },
