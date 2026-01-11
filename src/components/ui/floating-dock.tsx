@@ -165,8 +165,7 @@ function IconContainer({
 
 /**
  * Mobile versiyonu - Collapsible menu
- * Sol altta konumlandırılır ve sağa doğru açılır
- * Default olarak açık
+ * Alt kısımda ortalanmış, ekran genişliğine göre otomatik boyutlandırılır
  */
 const FloatingDockMobile = ({
   items,
@@ -176,13 +175,24 @@ const FloatingDockMobile = ({
   className?: string;
 }) => {
   const [open, setOpen] = useState(true); // Default açık
+  
+  // Toplam item sayısı + toggle buton = items.length + 1
+  // Her item için minimum alan: w-10 (40px) + gap
+  // Ekrana sığması için dinamik gap ve boyut hesaplanır
+  const totalItems = items.length + 1; // +1 for toggle button
+  
   return (
     <div className={cn('relative block md:hidden', className)}>
       <AnimatePresence>
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute left-full ml-3 bottom-0 flex flex-row gap-3"
+            className="absolute left-full bottom-0 flex flex-row items-center"
+            style={{
+              // Ekran genişliğine göre gap hesapla
+              // max-width: calc(100vw - toggle button - padding)
+              gap: `clamp(4px, calc((100vw - ${totalItems * 40}px - 48px) / ${totalItems}), 12px)`,
+            }}
           >
             {items.map((item, idx) => (
               <motion.div
@@ -204,10 +214,10 @@ const FloatingDockMobile = ({
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="h-12 w-12 rounded-full bg-neutral-900 flex items-center justify-center border border-white/[0.2] shadow-lg"
+                  className="h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center border border-white/[0.2] shadow-lg flex-shrink-0"
                   onClick={() => setOpen(false)}
                 >
-                  <div className="h-6 w-6">{item.icon}</div>
+                  <div className="h-5 w-5">{item.icon}</div>
                 </Link>
               </motion.div>
             ))}
@@ -216,9 +226,9 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-12 w-12 rounded-full bg-neutral-900 flex items-center justify-center border border-white/[0.2] shadow-lg"
+        className="h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center border border-white/[0.2] shadow-lg flex-shrink-0"
       >
-        <IconLayoutNavbarCollapse className={cn("h-6 w-6 text-white transition-transform duration-200", open && "rotate-90")} />
+        <IconLayoutNavbarCollapse className={cn("h-5 w-5 text-white transition-transform duration-200", open && "rotate-90")} />
       </button>
     </div>
   );

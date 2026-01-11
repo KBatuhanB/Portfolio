@@ -74,8 +74,8 @@ export function PortfolioNavigation() {
       <div className="hidden md:block fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
         <FloatingDock items={links} />
       </div>
-      {/* Mobile - Sol altta */}
-      <div className="md:hidden fixed bottom-4 left-4 z-50">
+      {/* Mobile - Sol altta, ekran genişliğine göre otomatik sığar */}
+      <div className="md:hidden fixed bottom-4 left-3 z-50" style={{ maxWidth: 'calc(100vw - 24px)' }}>
         <FloatingDock items={links} />
       </div>
     </>
