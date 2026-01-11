@@ -200,24 +200,23 @@ export interface Translations {
   /**
    * Skills (Yetenekler) Sayfası
    * 
-   * Her skill kategorisi için:
-   * - Kategori adı ve ikonu
-   * - Skill listesi (isim, seviye, açıklama)
-   * - Profesyonel deneyim yılı (opsiyonel)
+   * Profesyonel yaklaşım: Self-rating yerine objektif metrikler
+   * - Deneyim süresi (yıl bazında)
+   * - Aktif kullanım durumu
+   * - Proje bazlı deneyim
    */
   skills: {
     /** Bölüm başlıkları */
     sectionTitles: {
       allSkills: string;
-      proficiency: string;
       yearsOfExperience: string;
     };
-    /** Seviye etiketleri */
-    proficiencyLevels: {
-      beginner: string;
-      intermediate: string;
-      advanced: string;
-      expert: string;
+    /** Deneyim süreleri için etiketler */
+    experienceLabels: {
+      lessThanYear: string;
+      year: string;
+      years: string;
+      activelyUsing: string;
     };
     /** Skill kategorileri */
     categories: SkillCategory[];
@@ -238,18 +237,23 @@ export interface SkillCategory {
 
 /**
  * Tekil Skill Tipi
- * Her bir yetenek için detaylı bilgi
+ * 
+ * Profesyonel Yaklaşım:
+ * - Self-rating (level, proficiency) KALDIRILDI
+ * - Objektif metrikler: deneyim süresi, aktif kullanım
+ * 
+ * Neden bu yaklaşım?
+ * - Self-rating sübjektif ve yanıltıcı olabilir
+ * - İşverenler objektif metrikleri tercih eder
+ * - "3 yıl React deneyimi" > "React: %90"
  */
 export interface Skill {
+  /** Teknoloji/Yetenek adı */
   name: string;
-  /** 0-100 arası seviye */
-  level: number;
-  /** beginner | intermediate | advanced | expert */
-  proficiency: 'beginner' | 'intermediate' | 'advanced' | 'expert';
-  /** Opsiyonel açıklama */
-  description?: string;
-  /** Deneyim yılı (opsiyonel) */
-  yearsOfExperience?: number;
+  /** Deneyim yılı (zorunlu) - 0.5 = 6 ay, 1 = 1 yıl */
+  yearsOfExperience: number;
+  /** Aktif olarak kullanılıyor mu? (güncel projelerinde) */
+  isActive?: boolean;
 }
 
 // Dil sözlüğü tipi

@@ -736,20 +736,26 @@ My journey includes active participation in Game Jams, internships, and real-wor
   /**
    * Skills Page - English
    * 
-   * Skills extracted from projects, organized into professional categories.
-   * Each skill includes proficiency level and years of experience.
+   * Professional approach: Objective metrics instead of self-rating.
+   * "3 years React experience" > "React: 90%"
+   * 
+   * Each skill contains:
+   * - yearsOfExperience: Duration of experience (years)
+   * - isActive: Currently actively using?
    */
   skills: {
     sectionTitles: {
       allSkills: 'All Skills',
-      proficiency: 'Proficiency',
       yearsOfExperience: 'Experience',
     },
-    proficiencyLevels: {
-      beginner: 'Beginner',
-      intermediate: 'Intermediate',
-      advanced: 'Advanced',
-      expert: 'Expert',
+    /**
+     * Labels for experience duration format
+     */
+    experienceLabels: {
+      lessThanYear: '< 1 year',
+      year: 'year',
+      years: 'years',
+      activelyUsing: 'Actively Using',
     },
     categories: [
       {
@@ -758,13 +764,13 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '🎨',
         description: 'Modern web interfaces and user experience design',
         skills: [
-          { name: 'React.js', level: 90, proficiency: 'expert', yearsOfExperience: 2 },
-          { name: 'Next.js', level: 85, proficiency: 'advanced', yearsOfExperience: 1 },
-          { name: 'TypeScript', level: 95, proficiency: 'expert', yearsOfExperience: 2 },
-          { name: 'JavaScript ES6+', level: 90, proficiency: 'advanced', yearsOfExperience: 3 },
-          { name: 'Tailwind CSS', level: 88, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'Material-UI', level: 85, proficiency: 'advanced', yearsOfExperience: 1 },
-          { name: 'HTML5 & CSS3', level: 92, proficiency: 'expert', yearsOfExperience: 4 },
+          { name: 'React.js', yearsOfExperience: 2, isActive: true },
+          { name: 'Next.js', yearsOfExperience: 1, isActive: true },
+          { name: 'TypeScript', yearsOfExperience: 2, isActive: true },
+          { name: 'JavaScript ES6+', yearsOfExperience: 3, isActive: true },
+          { name: 'Tailwind CSS', yearsOfExperience: 2, isActive: true },
+          { name: 'Material-UI', yearsOfExperience: 1 },
+          { name: 'HTML5 & CSS3', yearsOfExperience: 4, isActive: true },
         ],
       },
       {
@@ -773,14 +779,13 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '⚙️',
         description: 'Server-side programming and API development',
         skills: [
-          { name: 'Node.js', level: 85, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'Express.js', level: 85, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'ASP.NET Core', level: 75, proficiency: 'intermediate', yearsOfExperience: 1 },
-          { name: 'REST API Design', level: 88, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'Python', level: 80, proficiency: 'expert', yearsOfExperience: 2 },
-          { name: 'Flask', level: 78, proficiency: 'intermediate', yearsOfExperience: 1 },
-          { name: 'C#', level: 88, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'Java', level: 75, proficiency: 'advanced', yearsOfExperience: 2 }
+          { name: 'Node.js', yearsOfExperience: 2, isActive: true },
+          { name: 'Express.js', yearsOfExperience: 2, isActive: true },
+          { name: 'ASP.NET Core', yearsOfExperience: 1 },
+          { name: 'REST API Design', yearsOfExperience: 2, isActive: true },
+          { name: 'Python', yearsOfExperience: 2, isActive: true },
+          { name: 'Flask', yearsOfExperience: 1 },
+          { name: 'C#', yearsOfExperience: 2, isActive: true },
         ],
       },
       {
@@ -789,11 +794,11 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '📱',
         description: 'Native Android application development',
         skills: [
-          { name: 'Kotlin', level: 82, proficiency: 'advanced', yearsOfExperience: 1 },
-          { name: 'Jetpack Compose', level: 80, proficiency: 'advanced', yearsOfExperience: 1 },
-          { name: 'Android SDK', level: 78, proficiency: 'intermediate', yearsOfExperience: 1 },
-          { name: 'Material Design 3', level: 85, proficiency: 'advanced', yearsOfExperience: 1 },
-          { name: 'MVVM Architecture', level: 80, proficiency: 'advanced', yearsOfExperience: 1 },
+          { name: 'Kotlin', yearsOfExperience: 1 },
+          { name: 'Jetpack Compose', yearsOfExperience: 1 },
+          { name: 'Android SDK', yearsOfExperience: 1 },
+          { name: 'Material Design 3', yearsOfExperience: 1 },
+          { name: 'MVVM Architecture', yearsOfExperience: 1 },
         ],
       },
       {
@@ -802,11 +807,11 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '🎮',
         description: '2D/3D game development and design with Unity',
         skills: [
-          { name: 'Unity Engine', level: 75, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'C# (Unity)', level: 78, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'Game Design', level: 80, proficiency: 'expert', yearsOfExperience: 2 },
-          { name: 'Level Design', level: 82, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: '2D Game Development', level: 80, proficiency: 'advanced', yearsOfExperience: 2 },
+          { name: 'Unity Engine', yearsOfExperience: 2, isActive: true },
+          { name: 'C# (Unity)', yearsOfExperience: 2, isActive: true },
+          { name: 'Game Design', yearsOfExperience: 2, isActive: true },
+          { name: 'Level Design', yearsOfExperience: 2, isActive: true },
+          { name: '2D Game Development', yearsOfExperience: 2, isActive: true },
         ],
       },
       {
@@ -815,11 +820,11 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '🗄️',
         description: 'Database design and management',
         skills: [
-          { name: 'MongoDB', level: 85, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'Firebase/Firestore', level: 80, proficiency: 'advanced', yearsOfExperience: 1 },
-          { name: 'SQLite', level: 80, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'Entity Framework', level: 75, proficiency: 'intermediate', yearsOfExperience: 1 },
-          { name: 'Database Design', level: 82, proficiency: 'advanced', yearsOfExperience: 2 },
+          { name: 'MongoDB', yearsOfExperience: 2, isActive: true },
+          { name: 'Firebase/Firestore', yearsOfExperience: 1, isActive: true },
+          { name: 'SQLite', yearsOfExperience: 2 },
+          { name: 'Entity Framework', yearsOfExperience: 1 },
+          { name: 'Database Design', yearsOfExperience: 2, isActive: true },
         ],
       },
       {
@@ -828,11 +833,11 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '🧪',
         description: 'Software testing and quality assurance',
         skills: [
-          { name: 'Jest', level: 85, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'Playwright', level: 82, proficiency: 'advanced', yearsOfExperience: 1 },
-          { name: 'Selenium', level: 78, proficiency: 'intermediate', yearsOfExperience: 1 },
-          { name: 'Unit Testing', level: 85, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'E2E Testing', level: 80, proficiency: 'advanced', yearsOfExperience: 1 },
+          { name: 'Jest', yearsOfExperience: 2, isActive: true },
+          { name: 'Playwright', yearsOfExperience: 1 },
+          { name: 'Selenium', yearsOfExperience: 1 },
+          { name: 'Unit Testing', yearsOfExperience: 2, isActive: true },
+          { name: 'E2E Testing', yearsOfExperience: 1 },
         ],
       },
       {
@@ -841,10 +846,10 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '🤖',
         description: 'Artificial intelligence and image processing technologies',
         skills: [
-          { name: 'MediaPipe', level: 80, proficiency: 'advanced', yearsOfExperience: 1 },
-          { name: 'OpenCV', level: 78, proficiency: 'intermediate', yearsOfExperience: 1 },
-          { name: 'Computer Vision', level: 75, proficiency: 'intermediate', yearsOfExperience: 1 },
-          { name: 'Speech Recognition', level: 72, proficiency: 'intermediate', yearsOfExperience: 1 },
+          { name: 'MediaPipe', yearsOfExperience: 1 },
+          { name: 'OpenCV', yearsOfExperience: 1 },
+          { name: 'Computer Vision', yearsOfExperience: 1 },
+          { name: 'Speech Recognition', yearsOfExperience: 1 },
         ],
       },
       {
@@ -853,10 +858,10 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '🔐',
         description: 'Data security and encryption technologies',
         skills: [
-          { name: 'AES-256 Encryption', level: 78, proficiency: 'intermediate', yearsOfExperience: 1 },
-          { name: 'Fernet Encryption', level: 75, proficiency: 'intermediate', yearsOfExperience: 1 },
-          { name: 'File Security', level: 80, proficiency: 'advanced', yearsOfExperience: 1 },
-          { name: 'Watchdog (File Monitoring)', level: 78, proficiency: 'intermediate', yearsOfExperience: 1 },
+          { name: 'AES-256 Encryption', yearsOfExperience: 1 },
+          { name: 'Fernet Encryption', yearsOfExperience: 1 },
+          { name: 'File Security', yearsOfExperience: 1 },
+          { name: 'Watchdog (File Monitoring)', yearsOfExperience: 1 },
         ],
       },
       {
@@ -865,12 +870,12 @@ My journey includes active participation in Game Jams, internships, and real-wor
         icon: '🛠️',
         description: 'Development tools and version control',
         skills: [
-          { name: 'Git & GitHub', level: 90, proficiency: 'expert', yearsOfExperience: 4 },
-          { name: 'VS Code', level: 92, proficiency: 'expert', yearsOfExperience: 4 },
-          { name: 'Swagger/OpenAPI', level: 85, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'npm/yarn', level: 88, proficiency: 'advanced', yearsOfExperience: 3 },
-          { name: 'Postman', level: 85, proficiency: 'advanced', yearsOfExperience: 2 },
-          { name: 'Figma', level: 70, proficiency: 'intermediate', yearsOfExperience: 1 },
+          { name: 'Git & GitHub', yearsOfExperience: 4, isActive: true },
+          { name: 'VS Code', yearsOfExperience: 4, isActive: true },
+          { name: 'Swagger/OpenAPI', yearsOfExperience: 2 },
+          { name: 'npm/yarn', yearsOfExperience: 3, isActive: true },
+          { name: 'Postman', yearsOfExperience: 2, isActive: true },
+          { name: 'Figma', yearsOfExperience: 1 },
         ],
       },
     ],

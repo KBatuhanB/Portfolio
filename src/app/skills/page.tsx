@@ -1,29 +1,27 @@
 /**
  * Skills Page - Yetenekler
  * 
- * Teknik yeteneklerin profesyonel kategoriler halinde sergilendiği sayfa.
- * Her kategori 3D Card ile gösterilir, içinde skill'ler progress bar ile.
+ * Profesyonel yaklaşım ile teknik yeteneklerin sergilendiği sayfa.
+ * Self-rating sistemleri yerine objektif metrikler kullanılır:
+ * - Deneyim süresi (yıl bazında)
+ * - Aktif kullanım durumu
  * 
- * Tasarım Özellikleri:
- * - Yellow tema - Home page'deki skills card'ı ile uyumlu
- * - BackgroundBeamsWithCollision arka plan efekti (yellow tema)
- * - 3D Card component'leri ile modern görünüm
- * - Animated progress bar'lar
- * - Hover efektleri ve smooth transitions
- * - Responsive grid layout
+ * Tasarım Felsefesi:
+ * - "3 yıl React deneyimi" > "React: %90" 
+ * - İşverenler sübjektif puanlamaya değil, somut deneyime bakar
+ * - Tag/Badge tabanlı modern ve minimal görünüm
  * 
  * Mimari:
  * - SOLID prensipleri: Her component tek sorumluluk
- * - Separation of Concerns: Veri i18n'de, UI burada
- * - DRY: Tekrar eden kodlar map ile render
- * - Type-safe: Tüm veriler TypeScript ile tip güvenli
+ * - Clean Code: Okunabilir, bakımı kolay
+ * - Type-safe: Tüm veriler TypeScript ile güvenli
  * 
  * @author Batuhan Bölükbaşı
  */
 
 'use client';
 
-import React, { useMemo, useCallback } from 'react';
+import React, { useMemo } from 'react';
 import { useI18n } from '@/i18n/i18n-context';
 import { SkillCategory, Skill } from '@/types/i18n.types';
 import { PortfolioNavigation } from '@/components/layout/PortfolioNavigation';
@@ -32,102 +30,140 @@ import { EncryptedText } from '@/components/ui/encrypted-text';
 import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
 
 /**
- * Proficiency seviyesine göre renk döndürür
- * Tutarlı renk kullanımı için merkezi fonksiyon
+ * Deneyim süresini formatla
  * 
- * @param proficiency - Skill seviyesi
- * @returns Tailwind CSS renk sınıfları
+ * Profesyonel portfolyolarda kullanılan format:
+ * - 0.5 yıl = "< 1 yıl"
+ * - 1 yıl = "1 yıl"
+ * - 2+ yıl = "2+ yıl"
+ * 
+ * @param years - Deneyim yılı (0.5 = 6 ay)
+ * @param labels - i18n etiketleri
+ * @returns Formatlanmış string
  */
-const getProficiencyColor = (proficiency: Skill['proficiency']): {
-  bg: string;
-  text: string;
-  border: string;
-  progress: string;
-} => {
-  const colors = {
-    beginner: {
-      bg: 'bg-gray-500/20',
-      text: 'text-gray-300',
-      border: 'border-gray-500/30',
-      progress: 'bg-gradient-to-r from-gray-400 to-gray-500',
-    },
-    intermediate: {
-      bg: 'bg-blue-500/20',
-      text: 'text-blue-300',
-      border: 'border-blue-500/30',
-      progress: 'bg-gradient-to-r from-blue-400 to-blue-500',
-    },
-    advanced: {
-      bg: 'bg-yellow-500/20',
-      text: 'text-yellow-300',
-      border: 'border-yellow-500/30',
-      progress: 'bg-gradient-to-r from-yellow-400 to-yellow-500',
-    },
-    expert: {
-      bg: 'bg-green-500/20',
-      text: 'text-green-300',
-      border: 'border-green-500/30',
-      progress: 'bg-gradient-to-r from-green-400 to-green-500',
-    },
-  };
-
-  return colors[proficiency] || colors.intermediate;
+const formatExperience = (
+  years: number,
+  labels: { lessThanYear: string; year: string; years: string }
+): string => {
+  if (years < 1) {
+    return labels.lessThanYear;
+  }
+  if (years === 1) {
+    return `1 ${labels.year}`;
+  }
+  return `${years}+ ${labels.years}`;
 };
 
 /**
- * Tek bir Skill için Progress Bar Component
+ * Deneyim süresine göre renk belirleme
  * 
- * Animasyonlu progress bar ile skill seviyesini gösterir.
- * Hover'da detaylı bilgi tooltip'i görünür.
+ * Gradient renk skalası:
+ * - < 1 yıl: Gri (başlangıç)
+ * - 1-2 yıl: Mavi (gelişen)
+ * - 2-3 yıl: Sarı (deneyimli)
+ * - 3+ yıl: Yeşil (kıdemli)
+ * 
+ * @param years - Deneyim yılı
+ * @returns Tailwind CSS renk sınıfları
+ */
+const getExperienceColor = (years: number): {
+  bg: string;
+  text: string;
+  border: string;
+  dot: string;
+} => {
+  if (years < 1) {
+    return {
+      bg: 'bg-slate-500/20',
+      text: 'text-slate-300',
+      border: 'border-slate-500/40',
+      dot: 'bg-slate-400',
+    };
+  }
+  if (years < 2) {
+    return {
+      bg: 'bg-blue-500/20',
+      text: 'text-blue-300',
+      border: 'border-blue-500/40',
+      dot: 'bg-blue-400',
+    };
+  }
+  if (years < 3) {
+    return {
+      bg: 'bg-yellow-500/20',
+      text: 'text-yellow-300',
+      border: 'border-yellow-500/40',
+      dot: 'bg-yellow-400',
+    };
+  }
+  // 3+ yıl - kıdemli
+  return {
+    bg: 'bg-emerald-500/20',
+    text: 'text-emerald-300',
+    border: 'border-emerald-500/40',
+    dot: 'bg-emerald-400',
+  };
+};
+
+/**
+ * Tek bir Skill Badge Component
+ * 
+ * Modern tag/badge tasarımı:
+ * - Skill adı
+ * - Deneyim süresi
+ * - Aktif kullanım göstergesi (opsiyonel)
  * 
  * @param skill - Skill verisi
- * @param proficiencyLabel - Çevrilmiş seviye etiketi
- * @param experienceLabel - Çevrilmiş deneyim etiketi
+ * @param experienceLabels - i18n deneyim etiketleri
  */
-interface SkillBarProps {
+interface SkillBadgeProps {
   skill: Skill;
-  proficiencyLabel: string;
+  experienceLabels: {
+    lessThanYear: string;
+    year: string;
+    years: string;
+    activelyUsing: string;
+  };
 }
 
-const SkillBar: React.FC<SkillBarProps> = ({ 
-  skill, 
-  proficiencyLabel, 
-}) => {
-  const colors = getProficiencyColor(skill.proficiency);
+const SkillBadge: React.FC<SkillBadgeProps> = ({ skill, experienceLabels }) => {
+  const colors = getExperienceColor(skill.yearsOfExperience);
+  const experienceText = formatExperience(skill.yearsOfExperience, experienceLabels);
 
   return (
-    <div className="group relative">
-      {/* Skill Başlık Satırı */}
-      <div className="flex items-center justify-between mb-1.5">
-        <span className="text-sm font-medium text-yellow-100 group-hover:text-yellow-300 transition-colors">
-          {skill.name}
-        </span>
-        <div className="flex items-center gap-2">
-          {/* Yüzde Göstergesi */}
-          <span className={`text-xs font-semibold ${colors.text}`}>
-            {skill.level}%
-          </span>
+    <div
+      className={`
+        group relative inline-flex items-center gap-2
+        px-3 py-2 rounded-lg
+        ${colors.bg} ${colors.border} border
+        transition-all duration-300
+        hover:scale-105 hover:shadow-lg
+        cursor-default
+      `}
+    >
+      {/* Deneyim göstergesi dot */}
+      <div className={`w-2 h-2 rounded-full ${colors.dot} flex-shrink-0`} />
+      
+      {/* Skill adı */}
+      <span className="text-sm font-medium text-yellow-100">
+        {skill.name}
+      </span>
+      
+      {/* Deneyim süresi */}
+      <span className={`text-xs font-semibold ${colors.text} ml-auto`}>
+        {experienceText}
+      </span>
+      
+      {/* Aktif kullanım badge'i */}
+      {skill.isActive && (
+        <div 
+          className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-black"
+          title={experienceLabels.activelyUsing}
+        >
+          {/* Pulse animasyonu - aktif kullanımı vurgular */}
+          <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75" />
         </div>
-      </div>
-
-      {/* Progress Bar */}
-      <div className="h-2 bg-yellow-500/10 rounded-full overflow-hidden">
-        <div
-          className={`h-full ${colors.progress} rounded-full transition-all duration-1000 ease-out`}
-          style={{ width: `${skill.level}%` }}
-        />
-      </div>
-
-      {/* Hover Tooltip - Proficiency Badge */}
-      <div className={`
-        absolute -top-8 left-1/2 transform -translate-x-1/2
-        px-2 py-1 rounded text-[10px] font-medium
-        ${colors.bg} ${colors.text} ${colors.border} border
-        opacity-0 group-hover:opacity-100 transition-opacity duration-200
-        pointer-events-none whitespace-nowrap z-10
-      `}>
-        {proficiencyLabel}
-      </div>
+      )}
     </div>
   );
 };
@@ -135,38 +171,32 @@ const SkillBar: React.FC<SkillBarProps> = ({
 /**
  * Skill Kategorisi Card Component
  * 
- * Her kategori için 3D Card içinde skill'leri listeler.
- * Hover efekti ve smooth animasyonlar içerir.
+ * Her kategori için 3D Card içinde skill badge'lerini listeler.
+ * Masonry layout için break-inside-avoid kullanılır.
  * 
  * @param category - Kategori verisi
- * @param proficiencyLabels - Çevrilmiş seviye etiketleri
- * @param experienceLabel - Çevrilmiş deneyim etiketi
+ * @param experienceLabels - i18n deneyim etiketleri
  */
 interface SkillCategoryCardProps {
   category: SkillCategory;
-  proficiencyLabels: Record<string, string>;
+  experienceLabels: {
+    lessThanYear: string;
+    year: string;
+    years: string;
+    activelyUsing: string;
+  };
 }
 
 const SkillCategoryCard: React.FC<SkillCategoryCardProps> = ({
   category,
-  proficiencyLabels,
+  experienceLabels,
 }) => {
   /**
-   * Kategorideki ortalama skill seviyesini hesapla
-   * Kategori kartının özet bilgisi için kullanılır
+   * Aktif kullanılan skill sayısı
    */
-  const averageLevel = useMemo(() => {
-    if (category.skills.length === 0) return 0;
-    const sum = category.skills.reduce((acc, skill) => acc + skill.level, 0);
-    return Math.round(sum / category.skills.length);
+  const activeSkillsCount = useMemo(() => {
+    return category.skills.filter(skill => skill.isActive).length;
   }, [category.skills]);
-
-  /**
-   * Skill seviyesine göre proficiency label'ını al
-   */
-  const getProficiencyLabel = useCallback((proficiency: string): string => {
-    return proficiencyLabels[proficiency] || proficiency;
-  }, [proficiencyLabels]);
 
   return (
     <CardContainer className="inter-var w-full" rotationIntensity={120}>
@@ -184,16 +214,26 @@ const SkillCategoryCard: React.FC<SkillCategoryCardProps> = ({
             {/* Icon ve İsim */}
             <div className="flex items-center gap-3">
               <span className="text-3xl">{category.icon}</span>
-              <h3 className="text-xl font-bold text-yellow-300">
-                {category.name}
-              </h3>
+              <div>
+                <h3 className="text-xl font-bold text-yellow-300">
+                  {category.name}
+                </h3>
+                {/* Skill sayısı */}
+                <span className="text-xs text-yellow-200/50">
+                  {category.skills.length} teknoloji
+                </span>
+              </div>
             </div>
-            {/* Ortalama Seviye Badge */}
-            <div className="flex items-center gap-1 px-2 py-1 bg-yellow-500/20 rounded-full border border-yellow-500/30">
-              <span className="text-xs font-semibold text-yellow-300">
-                {averageLevel}%
-              </span>
-            </div>
+            
+            {/* Aktif skill göstergesi */}
+            {activeSkillsCount > 0 && (
+              <div className="flex items-center gap-1 px-2 py-0.5 bg-green-500/20 rounded-full border border-green-500/30">
+                <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
+                <span className="text-[10px] font-medium text-green-300">
+                  {activeSkillsCount} aktif
+                </span>
+              </div>
+            )}
           </div>
         </CardItem>
 
@@ -204,14 +244,14 @@ const SkillCategoryCard: React.FC<SkillCategoryCardProps> = ({
           </p>
         </CardItem>
 
-        {/* Skills Listesi */}
+        {/* Skills Grid - Badge formatında */}
         <CardItem translateZ={20} className="w-full">
-          <div className="space-y-4">
+          <div className="flex flex-wrap gap-2">
             {category.skills.map((skill, index) => (
-              <SkillBar
+              <SkillBadge
                 key={`${category.id}-${skill.name}-${index}`}
                 skill={skill}
-                proficiencyLabel={getProficiencyLabel(skill.proficiency)}
+                experienceLabels={experienceLabels}
               />
             ))}
           </div>
@@ -231,9 +271,67 @@ const SkillCategoryCard: React.FC<SkillCategoryCardProps> = ({
 };
 
 /**
+ * Experience Legend Component
+ * 
+ * Deneyim süresi renk skalasını açıklar
+ * Kullanıcıların renk kodlamasını anlamasını sağlar
+ */
+interface ExperienceLegendProps {
+  labels: {
+    lessThanYear: string;
+    year: string;
+    years: string;
+    activelyUsing: string;
+  };
+}
+
+const ExperienceLegend: React.FC<ExperienceLegendProps> = ({ labels }) => {
+  const legendItems = [
+    { years: 0.5, label: labels.lessThanYear },
+    { years: 1, label: `1-2 ${labels.years}` },
+    { years: 2, label: `2-3 ${labels.years}` },
+    { years: 3, label: `3+ ${labels.years}` },
+  ];
+
+  return (
+    <div className="flex flex-wrap gap-3 justify-center">
+      {legendItems.map((item, index) => {
+        const colors = getExperienceColor(item.years);
+        return (
+          <div
+            key={index}
+            className={`
+              flex items-center gap-2 px-3 py-1.5 rounded-full
+              ${colors.bg} ${colors.border} border
+              transition-all duration-300 hover:scale-105
+            `}
+          >
+            <div className={`w-2 h-2 rounded-full ${colors.dot}`} />
+            <span className={`text-xs font-medium ${colors.text}`}>
+              {item.label}
+            </span>
+          </div>
+        );
+      })}
+      
+      {/* Aktif kullanım göstergesi */}
+      <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/20 border border-green-500/40">
+        <div className="relative w-2 h-2">
+          <div className="w-2 h-2 rounded-full bg-green-400" />
+          <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75" />
+        </div>
+        <span className="text-xs font-medium text-green-300">
+          {labels.activelyUsing}
+        </span>
+      </div>
+    </div>
+  );
+};
+
+/**
  * Skills Page Ana Component
  * 
- * Tüm skill kategorilerini grid layout'ta sergiler.
+ * Tüm skill kategorilerini masonry grid layout'ta sergiler.
  * Yellow tema, BackgroundBeams ve EncryptedText başlık kullanır.
  */
 export default function SkillsPage() {
@@ -241,7 +339,6 @@ export default function SkillsPage() {
 
   /**
    * Skill kategorilerini i18n'den al
-   * useMemo ile gereksiz hesaplamaları önle
    */
   const categories = useMemo(() => {
     return t.skills?.categories || [];
@@ -249,24 +346,37 @@ export default function SkillsPage() {
 
   /**
    * Toplam skill sayısını hesapla
-   * Sayfa özeti için kullanılır
    */
   const totalSkills = useMemo(() => {
     return categories.reduce((acc, cat) => acc + cat.skills.length, 0);
   }, [categories]);
 
   /**
-   * Proficiency labels'ı object olarak al
-   * SkillCategoryCard'a geçirmek için
+   * Toplam aktif skill sayısı
    */
-  const proficiencyLabels = useMemo(() => {
-    return t.skills?.proficiencyLevels || {
-      beginner: 'Beginner',
-      intermediate: 'Intermediate',
-      advanced: 'Advanced',
-      expert: 'Expert',
+  const totalActiveSkills = useMemo(() => {
+    return categories.reduce(
+      (acc, cat) => acc + cat.skills.filter(s => s.isActive).length,
+      0
+    );
+  }, [categories]);
+
+  /**
+   * Deneyim etiketlerini al
+   */
+  const experienceLabels = useMemo(() => {
+    return t.skills?.experienceLabels || {
+      lessThanYear: '< 1 yıl',
+      year: 'yıl',
+      years: 'yıl',
+      activelyUsing: 'Aktif',
     };
-  }, [t.skills?.proficiencyLevels]);
+  }, [t.skills?.experienceLabels]);
+
+  /**
+   * Dil kontrolü
+   */
+  const isTurkish = t.navigation.skills === 'Yetenekler';
 
   return (
     <>
@@ -274,7 +384,7 @@ export default function SkillsPage() {
         <div className="min-h-screen flex flex-col">
           <div className="container mx-auto py-12 pb-32 relative z-20 px-4 flex-1">
             
-            {/* Sayfa Başlığı - Encrypted text efekti ile */}
+            {/* Sayfa Başlığı */}
             <header className="mb-12 text-center py-4">
               <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-4">
                 <EncryptedText
@@ -290,66 +400,53 @@ export default function SkillsPage() {
               </p>
               
               {/* Özet İstatistikler */}
-              <div className="flex items-center justify-center gap-6 mt-6">
+              <div className="flex items-center justify-center gap-4 mt-6 flex-wrap">
                 <div className="flex items-center gap-2 px-4 py-2 bg-yellow-500/10 rounded-full border border-yellow-500/30">
                   <span className="text-yellow-400 text-lg">📦</span>
                   <span className="text-sm text-yellow-300">
-                    {categories.length} {t.navigation.skills === 'Yetenekler' ? 'Kategori' : 'Categories'}
+                    {categories.length} {isTurkish ? 'Kategori' : 'Categories'}
                   </span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-yellow-500/10 rounded-full border border-yellow-500/30">
                   <span className="text-yellow-400 text-lg">⚡</span>
                   <span className="text-sm text-yellow-300">
-                    {totalSkills} {t.navigation.skills === 'Yetenekler' ? 'Yetenek' : 'Skills'}
+                    {totalSkills} {isTurkish ? 'Teknoloji' : 'Technologies'}
                   </span>
                 </div>
+                {totalActiveSkills > 0 && (
+                  <div className="flex items-center gap-2 px-4 py-2 bg-green-500/10 rounded-full border border-green-500/30">
+                    <span className="text-green-400 text-lg">🚀</span>
+                    <span className="text-sm text-green-300">
+                      {totalActiveSkills} {isTurkish ? 'Aktif Kullanım' : 'Actively Using'}
+                    </span>
+                  </div>
+                )}
               </div>
             </header>
 
-            {/* Proficiency Legend - Seviye Göstergesi */}
+            {/* Deneyim Legend */}
             <div className="max-w-7xl mx-auto mb-10">
-              <div className="flex flex-wrap gap-3 justify-center">
-                {Object.entries(proficiencyLabels).map(([key, label]) => {
-                  const colors = getProficiencyColor(key as Skill['proficiency']);
-                  return (
-                    <div
-                      key={key}
-                      className={`
-                        flex items-center gap-2 px-3 py-1.5 rounded-full
-                        ${colors.bg} ${colors.border} border
-                        transition-all duration-300 hover:scale-105
-                      `}
-                    >
-                      <div className={`w-2 h-2 rounded-full ${colors.progress}`} />
-                      <span className={`text-xs font-medium ${colors.text}`}>
-                        {label}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
+              <ExperienceLegend labels={experienceLabels} />
             </div>
 
             {/* Skills Grid */}
             <div className="max-w-7xl mx-auto">
               {categories.length === 0 ? (
-                // Boş durum - Edge case handling
                 <div className="text-center py-16">
                   <div className="text-6xl mb-4">🔍</div>
                   <p className="text-yellow-300/70 text-lg">
-                    {t.navigation.skills === 'Yetenekler' 
+                    {isTurkish 
                       ? 'Henüz yetenek eklenmemiş.' 
                       : 'No skills added yet.'}
                   </p>
                 </div>
               ) : (
-                /* Masonry Layout - Sütun bazlı grid, her kart doğal yüksekliğinde */
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                   {categories.map((category) => (
                     <div key={category.id} className="break-inside-avoid">
                       <SkillCategoryCard
                         category={category}
-                        proficiencyLabels={proficiencyLabels}
+                        experienceLabels={experienceLabels}
                       />
                     </div>
                   ))}
@@ -360,7 +457,6 @@ export default function SkillsPage() {
         </div>
       </BackgroundBeamsWithCollision>
 
-      {/* Navigation - Her zaman en üstte */}
       <PortfolioNavigation />
     </>
   );
