@@ -30,6 +30,7 @@ const inter = Inter({
  * Her sayfa kendi metadata'sını override edebilir
  */
 export const metadata: Metadata = {
+  metadataBase: new URL('https://kbatuhan.me'),
   title: {
     default: 'Batuhan Bölükbaşı',
     template: '%s | Batuhan Bölükbaşı', // Sayfa başlığı template'i
@@ -39,20 +40,20 @@ export const metadata: Metadata = {
   authors: [{ name: 'Batuhan Bölükbaşı' }],
   creator: 'Batuhan Bölükbaşı',
   icons: {
-    icon: '/Portfolio/logo.png',
-    shortcut: '/Portfolio/logo.png',
-    apple: '/Portfolio/logo.png',
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
   },
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://kbatuhanb.github.io/Portfolio/',
+    url: 'https://kbatuhan.me/',
     siteName: 'Batuhan Bölükbaşı Portfolio',
     title: 'Batuhan Bölükbaşı - Portfolio',
     description: 'Kişisel portfolyo websitem',
     images: [
       {
-        url: '/Portfolio/logo.png',
+        url: '/logo.png',
         width: 512,
         height: 512,
         alt: 'Batuhan Bölükbaşı Logo',
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Batuhan Bölükbaşı - Portfolio',
     description: 'Kişisel portfolyo websitem',
-    images: ['/Portfolio/logo.png'],
+    images: ['/logo.png'],
   },
   robots: {
     index: true,
