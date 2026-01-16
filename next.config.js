@@ -13,10 +13,10 @@ const nextConfig = {
   output: 'export',
   
   // GitHub Pages base path (repo name)
-  basePath: '/Portfolio',
+  //basePath: '/Portfolio',
   
   // Asset prefix for GitHub Pages
-  assetPrefix: '/Portfolio',
+  //assetPrefix: '/Portfolio',
   
   // Image optimization ayarları - static export için unoptimized gerekli
   images: {
