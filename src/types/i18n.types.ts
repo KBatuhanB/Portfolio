@@ -180,6 +180,7 @@ export interface Translations {
       mobile: string;
       game: string;
       testing: string;
+      ai: string;
       all: string;
     };
     projectData: Record<string, ProjectData>;
