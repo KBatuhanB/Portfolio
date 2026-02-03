@@ -39,18 +39,20 @@ import { ProjectModal } from '@/components/ui/project-modal';
  * Proje kategorileri
  * Filtreleme için kullanılır
  */
-type CategoryFilter = 'all' | 'web' | 'backend' | 'mobile' | 'game' | 'testing';
+type CategoryFilter = 'all' | 'web' | 'backend' | 'mobile' | 'game' | 'testing' | 'ai';
 
 /**
  * Kategori listesi (UI için)
  */
-const CATEGORIES: CategoryFilter[] = ['all', 'web', 'backend', 'mobile', 'game', 'testing'];
+const CATEGORIES: CategoryFilter[] = ['all', 'web', 'backend', 'mobile', 'game', 'testing', 'ai'];
 
 /**
  * Proje sıralama düzeni
  * Featured ve status'a göre öncelik
  */
 const PROJECT_ORDER = [
+  'deskAI',
+  'personalDecisionCouncil',
   'fileGuardian',
   'sortingVisualizer',
   'handMouse',
