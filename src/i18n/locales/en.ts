@@ -198,6 +198,7 @@ My journey includes active participation in Game Jams, internships, and real-wor
       mobile: 'Mobile',
       game: 'Game',
       testing: 'Testing',
+      ai: 'AI',
       all: 'All',
     },
     projectData: {
@@ -257,7 +258,7 @@ My journey includes active participation in Game Jams, internships, and real-wor
           'Real-time deliberation with SSE streaming',
           'Democratic consensus mechanism with voting system',
         ],
-        categories: ['backend', 'web'],
+        categories: ['backend', 'web', 'ai'],
         technologies: ['TypeScript', 'React', 'Node.js', 'LangGraph', 'LangChain', 'OpenAI', 'Express.js', 'Vite', 'Tailwind CSS', 'Framer Motion', 'i18n'],
         youtubeUrl: 'https://www.youtube.com/watch?v=mA_TGMfgtjA',
         images: [],

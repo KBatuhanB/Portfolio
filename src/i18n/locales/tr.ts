@@ -199,6 +199,7 @@ Yolculuğum GameJam'lere aktif katılım, stajlar ve gerçek dünya projelerini 
       mobile: 'Mobil',
       game: 'Oyun',
       testing: 'Test',
+      ai: 'AI',
       all: 'Tümü',
     },
     projectData: {
@@ -258,7 +259,7 @@ Yolculuğum GameJam'lere aktif katılım, stajlar ve gerçek dünya projelerini 
           'SSE streaming ile gerçek zamanlı müzakere',
           'Oylama sistemi ile demokratik konsensüs mekanizması',
         ],
-        categories: ['backend', 'web'],
+        categories: ['backend', 'web', 'ai'],
         technologies: ['TypeScript', 'React', 'Node.js', 'LangGraph', 'LangChain', 'OpenAI', 'Express.js', 'Vite', 'Tailwind CSS', 'Framer Motion', 'i18n'],
         youtubeUrl: 'https://www.youtube.com/watch?v=mA_TGMfgtjA',
         images: [],
