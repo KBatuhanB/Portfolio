@@ -91,6 +91,23 @@ export const en: Translations = {
     technologies: 'Technologies',
     positions: [
       {
+        title: 'Software Engineering Intern',
+        company: 'Anadolu Agency',
+        period: 'Jan 2025 – Feb 2025',
+        location: 'Ankara',
+        type: 'internship',
+        description: [
+          'Developed an end-to-end "News Management System" (AA-NMS) that digitizes the agency\'s news production and distribution processes.',
+          'Architected a type-safe, modular, and responsive frontend using React 19, TypeScript, and Tailwind CSS.',
+          'Designed a serverless architecture with Supabase (BaaS) and PostgreSQL for the backend infrastructure, optimizing database relationships.',
+          'Implemented Row Level Security (RLS) policies for database-level data security and Role-Based Access Control (RBAC) mechanisms for Reporter/Editor roles.',
+          'Built a comprehensive Dashboard with a Rich Text Editor (WYSIWYG), drag-and-drop image uploads, and data visualization using Recharts.',
+          'Implemented advanced form validations using React Hook Form and Zod; enhanced performance with server-side pagination and debounced search.',
+          'Maintained clean code and sustainable architecture throughout the project by adhering to layered architecture principles.'
+        ],
+        technologies: ['React 19', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vite', 'Recharts', 'Zod', 'React Hook Form', 'Git']
+      },
+      {
         title: 'Software Development Intern',
         company: 'Secure Computing',
         period: 'Mar 2024 – Aug 2024',

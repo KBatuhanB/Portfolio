@@ -92,6 +92,23 @@ export const tr: Translations = {
     technologies: 'Teknolojiler',
     positions: [
       {
+        title: 'Yazılım Mühendisliği Stajyeri',
+        company: 'Anadolu Ajansı',
+        period: 'Oca 2025 – Şub 2025',
+        location: 'Ankara',
+        type: 'internship',
+        description: [
+          'Kurumun haber üretim ve dağıtım süreçlerini dijitalleştiren uçtan uca "Haber Yönetim Sistemi" (AA-NMS) geliştirdim.',
+          'React 19, TypeScript ve Tailwind CSS kullanarak tip güvenliği sağlanmış, modüler ve responsive bir frontend mimarisi kurguladım.',
+          'Backend altyapısı için Supabase (BaaS) ve PostgreSQL kullanarak sunucusuz (serverless) mimari tasarladım ve veritabanı ilişkilerini optimize ettim.',
+          'Veri güvenliğini veritabanı seviyesinde sağlayan Row Level Security (RLS) politikaları ve Muhabir/Editör rolleri için Rol Bazlı Erişim Kontrolü (RBAC) mekanizması uyguladım.',
+          'Zengin Metin Editörü (WYSIWYG), sürükle-bırak görsel yükleme ve Recharts ile veri görselleştirme içeren kapsamlı bir yönetim paneli (Dashboard) oluşturdum.',
+          'React Hook Form ve Zod kullanarak gelişmiş form validasyonları yazdım; sunucu taraflı sayfalama ve debounced arama ile performansı artırdım.',
+          'Proje boyunca katmanlı mimari prensiplerine sadık kalarak temiz kod ve sürdürülebilir bir yapı oluşturdum.'
+        ],
+        technologies: ['React 19', 'TypeScript', 'Supabase', 'PostgreSQL', 'Tailwind CSS', 'Vite', 'Recharts', 'Zod', 'React Hook Form', 'Git']
+      },
+      {
         title: 'Yazılım Geliştirme Stajyeri',
         company: 'Secure Computing',
         period: 'Mar 2024 – Ağu 2024',
