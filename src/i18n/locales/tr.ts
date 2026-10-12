@@ -92,6 +92,34 @@ export const tr: Translations = {
     technologies: 'Teknolojiler',
     positions: [
       {
+        title: 'Frontend Mühendisliği Stajyeri',
+        company: 'Jotform',
+        period: 'Haz 2026 – Tem 2026',
+        location: 'Ankara',
+        type: 'internship',
+        description: [
+          'React 19, Canva Apps SDK ve modüler monorepo mimarisi kullanarak üretime hazır üçüncü taraf "Jotform Tables for Canva" mikro ön-yüz uygulamasını geliştirdim.',
+          'Canva Sheets ile tip korumalı tablo senkronizasyonu sağlayan Data Connector ve etkileşimli tuval yerleşimleri sunan Design Editor modülleriyle çift yönlü intent mimarisi kurguladım.',
+          'Platformlar arası güvenli veri iletişimi için Çift Başlıklı (Double-Header) OAuth (Canva User JWT + Jotform OAuth Token) mekanizması ve merkezi API hata yönetim katmanı uyguladım.',
+          'Context API Splitting ve useReducer durum orkestrasyonu ile iframe bellek kullanımını optimize ettim ve gereksiz render maliyetlerini engelledim.',
+          'Sürükle-bırak sırasındaki arayüz donmalarını önlemek adına istemci taraflı HTML Canvas önbelleği ve asenkron veri yükleme mekanizmasıyla işlemci iş parçacığını rahatlattım.',
+          'Bulk Create akışında modüller arası yarış durumlarını (race condition) engellemek amacıyla 5000 ms TTL kuralına sahip yerel depolama (localStorage) devir köprüsü geliştirdim.',
+          'Atomik Tasarım prensiplerine sadık kalarak debounced arama, dinamik görünüm yığını (view stack) ve sonsuz kaydırma içeren modüler bir arayüz oluşturdum.'
+        ],
+        technologies: [
+          'React 19',
+          'JavaScript (ES2022+)',
+          'Canva Apps SDK',
+          'Context API',
+          'Mikro Ön-Yüz (Micro-Frontends)',
+          'OAuth 2.0 / JWT',
+          'HTML5 Canvas',
+          'CSS3',
+          'REST APIs',
+          'Git'
+        ]
+      },
+      {
         title: 'Yazılım Mühendisliği Stajyeri',
         company: 'Anadolu Ajansı',
         period: 'Oca 2025 – Şub 2025',

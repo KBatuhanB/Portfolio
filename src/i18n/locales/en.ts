@@ -91,6 +91,34 @@ export const en: Translations = {
     technologies: 'Technologies',
     positions: [
       {
+        title: 'Frontend Engineering Intern',
+        company: 'Jotform',
+        period: 'Jun 2026 – Jul 2026',
+        location: 'Ankara, Türkiye',
+        type: 'internship',
+        description: [
+          'Engineered the production-ready "Jotform Tables" third-party micro-frontend app using React 19, Canva Apps SDK, and modular monorepo architecture.',
+          'Architected a dual-intent workflow implementing Data Connector for type-safe tabular sync with Canva Sheets and Design Editor for interactive placements.',
+          'Implemented a Double-Header OAuth security mechanism (Canva User JWT + Jotform OAuth Token) paired with a centralized HTTP client for resilient error and session handling.',
+          'Optimized iframe memory footprint and eliminated redundant re-renders via Domain-Driven Context API Splitting and useReducer state orchestration.',
+          'Resolved UI-thread blocking during drag-and-drop operations by decoupling sync/async pipelines with client-side HTML Canvas image caching and lazy asset hydration.',
+          'Engineered a race-condition-safe handoff mechanism with TTL in LocalStorage to bridge Design Editor and Data Connector during Bulk Create flows.',
+          'Delivered an accessible, robust UI following Atomic Design principles, incorporating debounced search, custom view stacks, and infinite scrolling.'
+        ],
+        technologies: [
+          'React 19',
+          'JavaScript (ES2022+)',
+          'Canva Apps SDK',
+          'Context API',
+          'Micro-Frontends',
+          'OAuth 2.0 / JWT',
+          'HTML5 Canvas',
+          'CSS3',
+          'REST APIs',
+          'Git'
+        ]
+      },
+      {
         title: 'Software Engineering Intern',
         company: 'Anadolu Agency',
         period: 'Jan 2025 – Feb 2025',
