@@ -248,6 +248,47 @@ Yolculuğum GameJam'lere aktif katılım, stajlar ve gerçek dünya projelerini 
       all: 'Tümü',
     },
     projectData: {
+      jotformTablesForCanva: {
+        key: 'jotformTablesForCanva',
+        title: 'Jotform Tables for Canva - Mikro Ön-Yüz Eklentisi',
+        description: [
+          'Canva ekosistemi için geliştirilmiş üretime hazır mikro ön-yüz (micro-frontend) uygulaması',
+          'Data Connector ve Design Editor ile çift modüllü (dual-intent) mimari',
+          'Double-Header OAuth (JWT + OAuth Token) ile platformlar arası güvenli entegrasyon',
+          'HTML Canvas önbellekleme ve TTL tabanlı state handoff ile yüksek performanslı kullanıcı deneyimi',
+        ],
+        categories: ['frontend', 'web'],
+        technologies: ['React 19', 'JavaScript ES2022+', 'Canva Apps SDK', 'Context API', 'Micro-Frontends', 'OAuth 2.0', 'JWT', 'HTML5 Canvas', 'REST API', 'Git'],
+        youtubeUrl: 'https://youtu.be/JZ-8GP-iBEU',
+        images: [],
+        demoUrl: 'https://youtu.be/JZ-8GP-iBEU',
+        githubUrl: 'https://github.com/KBatuhanB',
+        featured: true,
+        status: 'completed',
+        detailedInfo: {
+          overview: 'Jotform Tables for Canva, Jotform monorepo altyapısı içerisinde React 19 ve Canva Apps SDK kullanılarak geliştirilmiş üretime hazır bir mikro ön-yüz (micro-frontend) uygulamasıdır. Proje, Jotform üzerindeki yanıt verilerini doğrudan Canva ortamına bağlayarak kullanıcıların Data Connector modülü ile canlı verileri Canva Sheets tablolarına tip güvenli biçimde aktarmasını ve Design Editor modülü ile form yanıtlarını tasarım şablonlarına etkileşimli olarak yerleştirmesini sağlar.',
+          features: [
+            'Çift Modüllü (Dual-Intent) İş Akışı: Canva Sheets ile tip güvenli tablo senkronizasyonu sağlayan Data Connector ve tuval üzerine dinamik bileşen yerleşimi sunan Design Editor entegrasyonu',
+            'Double-Header OAuth Güvenliği: Canva User JWT ve Jotform OAuth Token eşleşmesini denetleyen çift katmanlı kimlik doğrulama yapısı ve merkezi HTTP istemcisi entegrasyonu',
+            'Gerçek Zamanlı Gelen Kutusu: 300ms debounced arama, tarih ve durum filtreleri, yıldızlama ve kilit mekanizmalı sonsuz kaydırma (infinite scroll) desteği',
+            'Optimize Sürükle-Bırak Mimarisi: Senkron ve asenkron render hatlarını ayırarak HTML Canvas tabanlı hafif görsel önbellekleme ile sürükleme sırasındaki arayüz (UI thread) blokajının çözülmesi',
+            'Bulk Create Entegrasyonu: Design Editor ile Data Connector arasında köprü kuran, 5000ms TTL süreli LocalStorage handoff yapısı ile yarış koşullarına (race condition) karşı güvenli devir mekanizması',
+            'Atomik Tasarım Mimarisi: Canva App UI Kit altyapısında modüler ekran geçişleri (view stack), dinamik puanlama görselleri ve Skeleton yükleme durumları barındıran arayüz tasarımı',
+          ],
+          techDetails: {
+            'Frontend & SDK': ['React 19', 'JavaScript (ES2022+)', 'Canva Apps SDK (@canva/intents, @canva/app-ui-kit)', 'Atomic Design', 'CSS3'],
+            'Mimari & State Management': ['Micro-Frontends (Iframe Isolation)', 'Thin Entry Pattern', 'Context API Splitting', 'useReducer State Orchestration'],
+            'Güvenlik & Ağ': ['Double-Header OAuth (JWT + OAuth Token)', 'RESTful API', 'Merkezi HTTP İstemcisi', 'SFTP Remote Development Server (RDS)'],
+            'Optimizasyon & Performans': ['HTML Canvas Image Caching', 'Debounced Search', '5s TTL LocalStorage Bridge', 'Infinite Scroll Lock'],
+          },
+          learningOutcomes: [
+            'Micro-Frontend & SDK Entegrasyonu: Canva Apps SDK ile katı iframe güvenlik kısıtlamaları altında üçüncü taraf mikro ön-yüz uygulaması geliştirme tecrübesi',
+            'Performans Optimizasyonu: Senkron ve asenkron render hatlarını ayırarak ve görselleri istemci tarafında önbelleğe alarak arayüz kilitlenmelerini ve kare düşüşlerini (FPS drop) engelleme',
+            'İleri React Pattern\'leri: Iframe bellek kısıtlarında gereksiz re-render\'ları önlemek amacıyla domain-driven Context API splitting ve useReducer orchestration uygulaması',
+            'Enterprise OAuth Güvenliği: Otomatik oturum tazeleme ve hata toleransı içeren dayanıklı Double-Header OAuth kimlik doğrulama mimarisi tasarımı',
+          ],
+        },
+      },
       deskAI: {
         key: 'deskAI',
         title: 'Desk AI - Akıllı Kargo Yönetim Sistemi',

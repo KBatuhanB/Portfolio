@@ -51,6 +51,7 @@ const CATEGORIES: CategoryFilter[] = ['all', 'web', 'backend', 'mobile', 'game',
  * Featured ve status'a göre öncelik
  */
 const PROJECT_ORDER = [
+  'jotformTablesForCanva',
   'deskAI',
   'personalDecisionCouncil',
   'fileGuardian',

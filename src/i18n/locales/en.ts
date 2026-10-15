@@ -247,6 +247,47 @@ My journey includes active participation in Game Jams, internships, and real-wor
       all: 'All',
     },
     projectData: {
+      jotformTablesForCanva: {
+        key: 'jotformTablesForCanva',
+        title: 'Jotform Tables for Canva - Micro-Frontend App',
+        description: [
+          'Production-ready micro-frontend app connecting Jotform submission data with Canva',
+          'Dual-intent architecture: Data Connector for Canva Sheets & Design Editor for Canvas',
+          'Double-Header OAuth (JWT + OAuth Token) cross-platform security mechanism',
+          'High-performance drag-and-drop canvas interaction with HTML Canvas preview caching',
+        ],
+        categories: ['frontend', 'web'],
+        technologies: ['React 19', 'JavaScript ES2022+', 'Canva Apps SDK', 'Context API', 'Micro-Frontends', 'OAuth 2.0', 'JWT', 'HTML5 Canvas', 'REST API', 'Git'],
+        youtubeUrl: 'https://youtu.be/JZ-8GP-iBEU',
+        images: [],
+        demoUrl: 'https://youtu.be/JZ-8GP-iBEU',
+        githubUrl: 'https://github.com/KBatuhanB',
+        featured: true,
+        status: 'completed',
+        detailedInfo: {
+          overview: 'Jotform Tables for Canva is a production-ready third-party micro-frontend application built using React 19 and Canva Apps SDK within Jotform\'s frontend monorepo architecture. It bridges Jotform submission data directly into Canva, allowing users to sync tabular data with Canva Sheets via Data Connector and interactively place submission fields onto design templates via Design Editor.',
+          features: [
+            'Dual-Intent Workflow: Data Connector for type-safe tabular synchronization with Canva Sheets, and Design Editor for interactive canvas placements',
+            'Double-Header OAuth Security: Dual-token validation mechanism (Canva User JWT + Jotform OAuth Token) paired with a centralized HTTP client for secure cross-platform API requests',
+            'Real-Time Inbox & Filtering: Live submission inbox featuring debounced search (300ms), date/status filtering, starring, and infinite scroll pagination with lock mechanism',
+            'Optimized Drag-and-Drop: Solved UI-thread blocking during drag operations by decoupling sync/async pipelines using lightweight client-side HTML Canvas image caching',
+            'Bulk Create Integration: Race-condition-safe handoff mechanism using LocalStorage with a 5000ms TTL to seamlessly bridge Design Editor and Data Connector during bulk generation',
+            'Atomic Component Design: Modular UI architecture leveraging Canva App UI Kit, incorporating custom view stacks, rating visualizations, and Skeleton loaders',
+          ],
+          techDetails: {
+            'Frontend & SDK': ['React 19', 'JavaScript (ES2022+)', 'Canva Apps SDK (@canva/intents, @canva/app-ui-kit)', 'Atomic Design', 'CSS3'],
+            'Architecture & State': ['Micro-Frontends (Iframe Isolation)', 'Thin Entry Pattern', 'Context API Splitting', 'useReducer State Orchestration'],
+            'Security & Networking': ['Double-Header OAuth (JWT + OAuth Token)', 'RESTful API', 'Centralized HTTP Client', 'SFTP Remote Development Server (RDS)'],
+            'Optimization & Performance': ['HTML Canvas Image Caching', 'Debounced Search', '5s TTL LocalStorage Bridge', 'Infinite Scroll Lock'],
+          },
+          learningOutcomes: [
+            'Micro-Frontend & SDK Integration: Gained hands-on experience building third-party micro-frontend apps inside strict iframe security constraints using Canva Apps SDK',
+            'Performance Optimization: Solved UI-thread blocking and frame drops (FPS drops) by separating sync/async rendering pipelines and caching pre-rendered thumbnails on the client',
+            'Advanced React Patterns: Mastered domain-driven Context API splitting and useReducer state orchestration to eliminate redundant re-renders in memory-constrained iframe environments',
+            'Enterprise OAuth Security: Architected resilient Double-Header OAuth authentication flows with automated session recovery and error handling',
+          ],
+        },
+      },
       deskAI: {
         key: 'deskAI',
         title: 'Desk AI - Intelligent Cargo Management System',
